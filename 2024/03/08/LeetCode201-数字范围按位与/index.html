@@ -16,30 +16,18 @@
   <meta name="author" content="Zzl3">
   <meta name="keywords" content="">
   
-    <meta name="description" content="LeetCode201_数字范围按位与">
+    <meta name="description" content="发现规律：对所有数字执行按位与运算的结果是所有对应二进制字符串的公共前缀再用零补上后面的剩余位；其实所有数字的公共前缀 &#x3D; 起始末尾两个数的公共前缀 下面求 9 和 12 的公共前缀即可 ![[Blog&#x2F;source&#x2F;_posts&#x2F;LeetCode201-数字范围按位与&#x2F;7b5bcbe23022b23eeaa90b162559a01d_MD5.png]] 因此，题目可以转换为：给定两个整数，找到它">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode201_数字范围按位与">
-<meta property="og:url" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/index.html">
+<meta property="og:url" content="https://zzl3.github.io/2024/03/08/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/index.html">
 <meta property="og:site_name" content="Zzl3">
-<meta property="og:description" content="LeetCode201_数字范围按位与">
+<meta property="og:description" content="发现规律：对所有数字执行按位与运算的结果是所有对应二进制字符串的公共前缀再用零补上后面的剩余位；其实所有数字的公共前缀 &#x3D; 起始末尾两个数的公共前缀 下面求 9 和 12 的公共前缀即可 ![[Blog&#x2F;source&#x2F;_posts&#x2F;LeetCode201-数字范围按位与&#x2F;7b5bcbe23022b23eeaa90b162559a01d_MD5.png]] 因此，题目可以转换为：给定两个整数，找到它">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/1705715279871-1f03b859-f4e3-4ce5-8578-e35683f15165.png">
-<meta property="og:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/1705715269407-cb887b5a-0e9f-497c-b73a-fd1f0ae71df2.png">
-<meta property="og:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/1e15e11c7bc4ce1316ef644c0f1859df.svg">
-<meta property="og:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/df378375e7693bdcf9535661c023c02e.svg">
-<meta property="og:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/53072c2388d69edc65c2377681e4e87c.svg">
-<meta property="og:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/ee9fbf2edd8635466eb6c0d93bc67499.svg">
-<meta property="og:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/df378375e7693bdcf9535661c023c02e.svg">
-<meta property="og:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/31520f9df9d12a97eab162fdc1008f11.svg">
-<meta property="og:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/53072c2388d69edc65c2377681e4e87c.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/df378375e7693bdcf9535661c023c02e.svg">
-<meta property="og:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/1705715354096-9a440c77-700c-469c-848b-3d14759842c1.png">
-<meta property="article:published_time" content="2024-01-20T01:52:47.000Z">
-<meta property="article:modified_time" content="2024-01-20T01:54:12.000Z">
+<meta property="article:published_time" content="2024-03-08T11:23:42.000Z">
+<meta property="article:modified_time" content="2024-03-31T11:51:44.000Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="位运算">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zzl3.github.io/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/1705715279871-1f03b859-f4e3-4ce5-8578-e35683f15165.png">
   
   
   
@@ -243,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-20 09:52" pubdate>
-          2024年1月20日 上午
+        <time datetime="2024-03-08 19:23" pubdate>
+          2024年3月8日 晚上
         </time>
       </span>
     
@@ -255,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          264 字
+          579 字
         
       </span>
     
@@ -266,7 +254,7 @@
         
         
         
-          3 分钟
+          5 分钟
         
       </span>
     
@@ -309,7 +297,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年1月20日 上午
+                    本文最后更新于：2024年3月31日 晚上
                   
                 
               </p>
@@ -317,22 +305,20 @@
             
               <div class="markdown-body">
                 
-                <p>LeetCode201_数字范围按位与</p>
-<span id="more"></span>
-<p>发现规律：对所有数字执行按位与运算的结果是所有对应二进制字符串的公共前缀再用零补上后面的剩余位；其实所有数字的公共前缀 = 起始末尾两个数的公共前缀</p>
-<p>下面求 9 和 12 的公共前缀即可</p>
-<p><img src="/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/1705715279871-1f03b859-f4e3-4ce5-8578-e35683f15165.png" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>因此，题目可以转换为：给定两个整数，找到它们对应的二进制字符串的公共前缀</p>
+                <p>发现规律：对所有数字执行按位与运算的结果是所有对应二进制字符串的公共前缀再用零补上后面的剩余位；其实所有数字的公共前缀 = 起始末尾两个数的公共前缀<br>
+下面求 9 和 12 的公共前缀即可<br>
+![[Blog/source/_posts/LeetCode201-数字范围按位与/7b5bcbe23022b23eeaa90b162559a01d_MD5.png]]<br>
+因此，题目可以转换为：给定两个整数，找到它们对应的二进制字符串的公共前缀</p>
 <h3 id="位移">位移</h3>
 <ol>
 <li>右移，将两个数字压缩为它们的公共前缀；在迭代过程中，我们计算执行的右移操作数</li>
 <li>将得到的公共前缀左移相同的操作数得到结果</li>
 </ol>
-<p><img src="/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/1705715269407-cb887b5a-0e9f-497c-b73a-fd1f0ae71df2.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>![[Blog/source/_posts/LeetCode201-数字范围按位与/c25bafc8861907dcbac2913fe1448276_MD5.png]]</p>
 <h3 id="Brian-Kernighan-算法">Brian Kernighan 算法</h3>
-<p>技巧：<img src="/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/1e15e11c7bc4ce1316ef644c0f1859df.svg" srcset="/img/loading.gif" lazyload alt="img">会消去<img src="/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/df378375e7693bdcf9535661c023c02e.svg" srcset="/img/loading.gif" lazyload alt="img">最后一位的<img src="/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/53072c2388d69edc65c2377681e4e87c.svg" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>对于<img src="/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/ee9fbf2edd8635466eb6c0d93bc67499.svg" srcset="/img/loading.gif" lazyload alt="img">，可以对<img src="/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/df378375e7693bdcf9535661c023c02e.svg" srcset="/img/loading.gif" lazyload alt="img">逐步使用该技巧，直到其<img src="/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/31520f9df9d12a97eab162fdc1008f11.svg" srcset="/img/loading.gif" lazyload alt="img">；这时非公共前缀的<img src="/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/53072c2388d69edc65c2377681e4e87c.svg" srcset="/img/loading.gif" lazyload alt="img">被消去，直接返回<img src="https://cdn.nlark.com/yuque/__latex/df378375e7693bdcf9535661c023c02e.svg" srcset="/img/loading.gif" lazyload alt="img">即可</p>
-<p><img src="/2024/01/20/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/1705715354096-9a440c77-700c-469c-848b-3d14759842c1.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>技巧：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi mathvariant="normal">&amp;</mi><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">n\&amp;(n-1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">&amp;</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>会消去<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>最后一位的<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span><br>
+对于<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>m</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[m,n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal">m</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">]</span></span></span></span>，可以对<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>逐步使用该技巧，直到其<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mo>=</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">&lt;=m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span>；这时非公共前缀的<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>被消去，直接返回<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>即可<br>
+![[Blog/source/_posts/LeetCode201-数字范围按位与/72c02c6d68b880389758919bbad99adf_MD5.png]]</p>
 
                 
               </div>
@@ -386,7 +372,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>LeetCode201_数字范围按位与</div>
-      <div>https://zzl3.github.io/2024/01/20/LeetCode201-数字范围按位与/</div>
+      <div>https://zzl3.github.io/2024/03/08/LeetCode201-数字范围按位与/</div>
     </div>
     <div class="license-meta">
       
@@ -398,7 +384,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月20日</div>
+          <div>2024年3月8日</div>
         </div>
       
       
@@ -430,9 +416,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/08/LeetCode4-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" title="LeetCode4_寻找两个正序数组的中位数">
+                      <a href="/2024/03/08/LeetCode1493-%E5%88%A0%E6%8E%89%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E4%BB%A5%E5%90%8E%E5%85%A8%E4%B8%BA1%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E6%95%B0%E7%BB%84/" title="LeetCode1493_删掉一个元素以后全为1的最长子数组">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">LeetCode4_寻找两个正序数组的中位数</span>
+                        <span class="hidden-mobile">LeetCode1493_删掉一个元素以后全为1的最长子数组</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -440,8 +426,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/01/19/LeetCode188-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAIV/" title="LeetCode188_买卖股票的最佳时机IV">
-                        <span class="hidden-mobile">LeetCode188_买卖股票的最佳时机IV</span>
+                      <a href="/2024/03/08/LeetCode236-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" title="LeetCode236_二叉树的最近公共祖先">
+                        <span class="hidden-mobile">LeetCode236_二叉树的最近公共祖先</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

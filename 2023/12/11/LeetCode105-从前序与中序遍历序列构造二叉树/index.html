@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="Zzl3">
 <meta property="og:description" content="LeetCode105_从前序与中序遍历序列构造二叉树">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic.leetcode-cn.com/1629825510-roByLr-Picture1.png">
+<meta property="og:image" content="https://zzl3.github.io/2023/12/11/LeetCode105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/Picture1.png">
 <meta property="article:published_time" content="2023-12-11T02:25:12.000Z">
-<meta property="article:modified_time" content="2023-12-11T02:22:38.000Z">
+<meta property="article:modified_time" content="2024-03-29T07:04:08.000Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="二叉树">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pic.leetcode-cn.com/1629825510-roByLr-Picture1.png">
+<meta name="twitter:image" content="https://zzl3.github.io/2023/12/11/LeetCode105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/Picture1.png">
   
   
   
@@ -299,7 +299,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年12月11日 上午
+                    本文最后更新于：2024年3月29日 下午
                   
                 
               </p>
@@ -317,7 +317,7 @@
 <li>在中序遍历中搜索根节点 node 的索引 ，可将 中序遍历 划分为 [ 左子树 | 根节点 | 右子树 ]</li>
 <li>根据中序遍历中的左（右）子树的节点数量，可将 前序遍历 划分为 [ 根节点 | 左子树 | 右子树 ]</li>
 </ol>
-<p><img src="https://pic.leetcode-cn.com/1629825510-roByLr-Picture1.png" srcset="/img/loading.gif" lazyload alt="Picture1.png"></p>
+<p><img src="/2023/12/11/LeetCode105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/Picture1.png" srcset="/img/loading.gif" lazyload alt="Picture1.png"></p>
 <p>可确定 <strong>三个节点</strong> ：1.树的根节点、2.左子树根节点、3.右子树根节点</p>
 <p>然后继续分治；对左右子树继续确定根节点 &amp; 左子树根节点 &amp; 右子树根节点</p>
 <p>这个只适用于树中每个值都互相不相等，因为是依靠值-值下标来确定的；由于中间是按照中序遍历根节点的位置，确定左右子树的数量，进而根据前序遍历确定左右子树根节点，进而递归</p>
