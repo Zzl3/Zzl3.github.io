@@ -16,15 +16,15 @@
   <meta name="author" content="Zzl3">
   <meta name="keywords" content="">
   
-    <meta name="description" content="可以转换为以下问题：  枚举右端点rightrightright，希望找到最小的左端点leftleftleft，使得[left,right][left, right][left,right]包含不超过kkk个000 只要枚举右端点，找到区间长度的最大值即可  判断区间000的个数 可以将000和111互换，对数组AAA求出前缀和，记为数组PPP； 那么当且仅当两者的前缀和之差P[right]−P[">
+    <meta name="description" content="LeetCode1004_最大连续1的个数III">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode1004_最大连续1的个数III">
 <meta property="og:url" content="https://zzl3.github.io/2024/03/08/LeetCode1004-%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD1%E7%9A%84%E4%B8%AA%E6%95%B0III/index.html">
 <meta property="og:site_name" content="Zzl3">
-<meta property="og:description" content="可以转换为以下问题：  枚举右端点rightrightright，希望找到最小的左端点leftleftleft，使得[left,right][left, right][left,right]包含不超过kkk个000 只要枚举右端点，找到区间长度的最大值即可  判断区间000的个数 可以将000和111互换，对数组AAA求出前缀和，记为数组PPP； 那么当且仅当两者的前缀和之差P[right]−P[">
+<meta property="og:description" content="LeetCode1004_最大连续1的个数III">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-08T11:23:42.000Z">
-<meta property="article:modified_time" content="2024-03-31T11:44:54.000Z">
+<meta property="article:modified_time" content="2024-04-04T09:38:00.000Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="数组">
 <meta property="article:tag" content="二分查找">
@@ -299,7 +299,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年3月31日 晚上
+                    本文最后更新于：2024年4月4日 下午
                   
                 
               </p>
@@ -307,7 +307,9 @@
             
               <div class="markdown-body">
                 
-                <p>可以转换为以下问题：</p>
+                <p>LeetCode1004_最大连续1的个数III</p>
+<span id="more"></span>
+<p>可以转换为以下问题：</p>
 <ol>
 <li>枚举右端点<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">right</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span></span>，希望找到最小的左端点<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">left</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span></span></span></span>，使得<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo separator="true">,</mo><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[left, right]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span><span class="mclose">]</span></span></span></span>包含不超过<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>个<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></li>
 <li>只要枚举右端点，找到区间长度的最大值即可</li>

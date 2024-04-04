@@ -16,15 +16,15 @@
   <meta name="author" content="Zzl3">
   <meta name="keywords" content="">
   
-    <meta name="description" content="【遍历方式】 因为需要尽量让叶子结点的父结点安装摄像头，所以需要从底往上推导，也就是后序遍历 【转移方程】 每个节点有3种状态；父结点就可以根据每个节点的  0：该节点无覆盖 1：本节点有摄像头 2：本节点有覆盖  【空节点状态】 不能是无覆盖状态：因为叶子结点就可以放摄像头了 不能是有摄像头状态：因为叶子结点就没必要放摄像头了 所以应该是 有覆盖 状态 12&#x2F;&#x2F; 空节点，该节点有覆盖if (cu">
+    <meta name="description" content="LeetCode968_监控二叉树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode968_监控二叉树">
 <meta property="og:url" content="https://zzl3.github.io/2024/03/08/LeetCode968-%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="Zzl3">
-<meta property="og:description" content="【遍历方式】 因为需要尽量让叶子结点的父结点安装摄像头，所以需要从底往上推导，也就是后序遍历 【转移方程】 每个节点有3种状态；父结点就可以根据每个节点的  0：该节点无覆盖 1：本节点有摄像头 2：本节点有覆盖  【空节点状态】 不能是无覆盖状态：因为叶子结点就可以放摄像头了 不能是有摄像头状态：因为叶子结点就没必要放摄像头了 所以应该是 有覆盖 状态 12&#x2F;&#x2F; 空节点，该节点有覆盖if (cu">
+<meta property="og:description" content="LeetCode968_监控二叉树">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-08T11:23:42.000Z">
-<meta property="article:modified_time" content="2024-03-31T11:49:52.000Z">
+<meta property="article:modified_time" content="2024-04-04T09:38:08.000Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="二叉树">
 <meta property="article:tag" content="树">
@@ -244,7 +244,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          596 字
+          613 字
         
       </span>
     
@@ -255,7 +255,7 @@
         
         
         
-          5 分钟
+          6 分钟
         
       </span>
     
@@ -298,7 +298,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年3月31日 晚上
+                    本文最后更新于：2024年4月4日 下午
                   
                 
               </p>
@@ -306,7 +306,9 @@
             
               <div class="markdown-body">
                 
-                <p><strong>【遍历方式】</strong><br>
+                <p>LeetCode968_监控二叉树</p>
+<span id="more"></span>
+<p><strong>【遍历方式】</strong><br>
 因为需要尽量让叶子结点的父结点安装摄像头，所以需要从底往上推导，也就是后序遍历</p>
 <p><strong>【转移方程】</strong><br>
 每个节点有3种状态；父结点就可以根据每个节点的</p>

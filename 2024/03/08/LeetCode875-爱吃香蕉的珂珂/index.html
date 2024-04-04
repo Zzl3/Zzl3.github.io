@@ -16,15 +16,15 @@
   <meta name="author" content="Zzl3">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这道题感觉就是在对题目进行推导计算公式 思路 如果在hhh小时内吃掉所有香蕉的最小速度是每小时kkk个香蕉，则当吃香蕉的速度大于每小时kkk个香蕉时一定可以在hhh小时内吃掉所有香蕉，当吃香蕉的速度小于每小时kkk个香蕉时一定不能在hhh小时内吃掉所有香蕉 因此可以用二分查找的方法得到最小速度kkk；由于每小时都要吃香蕉，即每小时至少吃111个香蕉，下界是111；由于每小时最多吃一堆香蕉，即每小时">
+    <meta name="description" content="LeetCode875_爱吃香蕉的珂珂">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode875_爱吃香蕉的珂珂">
 <meta property="og:url" content="https://zzl3.github.io/2024/03/08/LeetCode875-%E7%88%B1%E5%90%83%E9%A6%99%E8%95%89%E7%9A%84%E7%8F%82%E7%8F%82/index.html">
 <meta property="og:site_name" content="Zzl3">
-<meta property="og:description" content="这道题感觉就是在对题目进行推导计算公式 思路 如果在hhh小时内吃掉所有香蕉的最小速度是每小时kkk个香蕉，则当吃香蕉的速度大于每小时kkk个香蕉时一定可以在hhh小时内吃掉所有香蕉，当吃香蕉的速度小于每小时kkk个香蕉时一定不能在hhh小时内吃掉所有香蕉 因此可以用二分查找的方法得到最小速度kkk；由于每小时都要吃香蕉，即每小时至少吃111个香蕉，下界是111；由于每小时最多吃一堆香蕉，即每小时">
+<meta property="og:description" content="LeetCode875_爱吃香蕉的珂珂">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-08T11:23:42.000Z">
-<meta property="article:modified_time" content="2024-03-31T11:49:04.000Z">
+<meta property="article:modified_time" content="2024-04-04T09:38:26.000Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="数组">
 <meta property="article:tag" content="二分查找">
@@ -298,7 +298,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年3月31日 晚上
+                    本文最后更新于：2024年4月4日 下午
                   
                 
               </p>
@@ -306,7 +306,9 @@
             
               <div class="markdown-body">
                 
-                <p>这道题感觉就是在对题目进行推导计算公式</p>
+                <p>LeetCode875_爱吃香蕉的珂珂</p>
+<span id="more"></span>
+<p>这道题感觉就是在对题目进行推导计算公式</p>
 <h3 id="思路">思路</h3>
 <p>如果在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span>小时内吃掉所有香蕉的最小速度是每小时<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>个香蕉，则当吃香蕉的速度大于每小时<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>个香蕉时一定可以在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span>小时内吃掉所有香蕉，当吃香蕉的速度小于每小时<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>个香蕉时一定不能在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span>小时内吃掉所有香蕉<br>
 因此可以用二分查找的方法得到最小速度<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>；由于每小时都要吃香蕉，即每小时至少吃<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>个香蕉，下界是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>；由于每小时最多吃一堆香蕉，即每小时吃的香蕉数目不会超过最多的一堆中的香蕉数目，因此上界是最多的一堆中的香蕉数目<br>

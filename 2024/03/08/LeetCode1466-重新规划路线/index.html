@@ -16,15 +16,15 @@
   <meta name="author" content="Zzl3">
   <meta name="keywords" content="">
   
-    <meta name="description" content="如果忽略边的方向，将每条有向边以及其反向边加入到图中，那么从任意一点出发都能到达000号点，路径上可能会经过反向边，则需要变更与之对应的原边的方向，需要变更的次数即为答案 考虑从000出发去遍历其他点，原来需要统计反向边的数量，现在需要统计原方向边的数量 用111标记原方向的边，用000标记反向边，然后从000号点开始遍历，访问到某个新的点时，所经过的边被111标记，则令答案加111，统计得到的答">
+    <meta name="description" content="LeetCode1466_重新规划路线">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode1466_重新规划路线">
 <meta property="og:url" content="https://zzl3.github.io/2024/03/08/LeetCode1466-%E9%87%8D%E6%96%B0%E8%A7%84%E5%88%92%E8%B7%AF%E7%BA%BF/index.html">
 <meta property="og:site_name" content="Zzl3">
-<meta property="og:description" content="如果忽略边的方向，将每条有向边以及其反向边加入到图中，那么从任意一点出发都能到达000号点，路径上可能会经过反向边，则需要变更与之对应的原边的方向，需要变更的次数即为答案 考虑从000出发去遍历其他点，原来需要统计反向边的数量，现在需要统计原方向边的数量 用111标记原方向的边，用000标记反向边，然后从000号点开始遍历，访问到某个新的点时，所经过的边被111标记，则令答案加111，统计得到的答">
+<meta property="og:description" content="LeetCode1466_重新规划路线">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-08T11:23:42.000Z">
-<meta property="article:modified_time" content="2024-03-31T11:51:06.000Z">
+<meta property="article:modified_time" content="2024-04-04T09:37:28.000Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="图">
 <meta name="twitter:card" content="summary_large_image">
@@ -243,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          791 字
+          810 字
         
       </span>
     
@@ -297,7 +297,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年3月31日 晚上
+                    本文最后更新于：2024年4月4日 下午
                   
                 
               </p>
@@ -305,7 +305,9 @@
             
               <div class="markdown-body">
                 
-                <p>如果忽略边的方向，将每条有向边以及其反向边加入到图中，那么从任意一点出发都能到达<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>号点，路径上可能会经过反向边，则需要变更与之对应的原边的方向，需要变更的次数即为答案<br>
+                <p>LeetCode1466_重新规划路线</p>
+<span id="more"></span>
+<p>如果忽略边的方向，将每条有向边以及其反向边加入到图中，那么从任意一点出发都能到达<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>号点，路径上可能会经过反向边，则需要变更与之对应的原边的方向，需要变更的次数即为答案<br>
 考虑从<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>出发去遍历其他点，原来需要统计反向边的数量，现在需要统计原方向边的数量<br>
 用<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>标记原方向的边，用<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>标记反向边，然后从<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>号点开始遍历，访问到某个新的点时，所经过的边被<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>标记，则令答案加<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，统计得到的答案就是需要变更方向的最小路线数</p>
 <p>这道题的难点还有怎么用代码构建树</p>
