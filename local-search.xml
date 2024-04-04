@@ -378,9 +378,9 @@
     
     <tags>
       
-      <tag>字符串</tag>
-      
       <tag>数组</tag>
+      
+      <tag>字符串</tag>
       
       <tag>字典树</tag>
       
@@ -755,9 +755,9 @@
       
       <tag>哈希表</tag>
       
-      <tag>字符串</tag>
-      
       <tag>滑动窗口</tag>
+      
+      <tag>字符串</tag>
       
     </tags>
     
