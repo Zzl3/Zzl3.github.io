@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://zzl3.github.io/Assets/Pasted%20image%2020240418162040.png">
 <meta property="og:image" content="https://zzl3.github.io/Assets/Pasted%20image%2020240418162427.png">
 <meta property="article:published_time" content="2023-08-21T09:08:59.000Z">
-<meta property="article:modified_time" content="2024-04-18T09:41:58.000Z">
+<meta property="article:modified_time" content="2024-04-18T12:56:54.000Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary_large_image">
@@ -247,7 +247,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6.1k words
+          6.3k words
         
       </span>
     
@@ -258,7 +258,7 @@
         
         
         
-          52 mins
+          53 mins
         
       </span>
     
@@ -319,6 +319,7 @@
 <code>categories</code>用法：[分类1,分类2]</p>
 <h2 id="其他解决">其他解决</h2>
 <h3 id="Operation-timed-out">Operation timed out</h3>
+<h4 id="Mac">Mac</h4>
 <p>这个是因为代理的问题，采用终端需要配置代理</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl cip.cc <span class="hljs-comment">#查看当前IP地址</span><br>vi ~/.zshrc <span class="hljs-comment">#编辑配置,Mac电脑</span><br></code></pre></td></tr></table></figure>
 <p>在配置中添加如下内容，这里的端口号需要自行查看自己的网络设置中的端口号</p>
@@ -327,6 +328,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> ~/.bash_profile<br></code></pre></td></tr></table></figure>
 <p>代理模式的开启和关闭</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">proxy <span class="hljs-comment">#开启代理模式</span><br>unproxy <span class="hljs-comment">#关闭代理模式</span><br></code></pre></td></tr></table></figure>
+<h4 id="Windows">Windows</h4>
+<p>设置代理，这里的端口号需要自行查看自己的网络设置中的端口号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> http_proxy=http://127.0.0.1:7890<br><span class="hljs-built_in">set</span> https_proxy=http://127.0.0.1:7890<br></code></pre></td></tr></table></figure>
+<p>还原代理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> http_proxy=<br><span class="hljs-built_in">set</span> https_proxy=<br></code></pre></td></tr></table></figure>
 <h3 id="Permission-denied">Permission denied</h3>
 <p>这里是需要把repo的格式改一下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">https://自己的token@github.com/用户名/用户名.github.io.git<br></code></pre></td></tr></table></figure>
