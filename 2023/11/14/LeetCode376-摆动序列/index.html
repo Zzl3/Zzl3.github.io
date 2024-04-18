@@ -23,16 +23,16 @@
 <meta property="og:site_name" content="Zzl3">
 <meta property="og:description" content="LeetCode376_摆动序列">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zzl3.github.io/2023/11/14/assets/20201124174327597.png">
-<meta property="og:image" content="https://zzl3.github.io/2023/11/14/assets/20230106170449-20231114103006955.png">
-<meta property="og:image" content="https://zzl3.github.io/2023/11/14/assets/20201124174357612.png">
-<meta property="og:image" content="https://zzl3.github.io/2023/11/14/assets/20230108171505.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/20201124174327597.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/20230106170449-20231114103006955.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/20201124174357612.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/20230108171505.png">
 <meta property="article:published_time" content="2023-11-14T02:25:12.000Z">
-<meta property="article:modified_time" content="2024-04-18T05:46:24.000Z">
+<meta property="article:modified_time" content="2024-04-18T05:55:12.000Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="贪心">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zzl3.github.io/2023/11/14/assets/20201124174327597.png">
+<meta name="twitter:image" content="https://zzl3.github.io/Assets/20201124174327597.png">
   
   
   
@@ -313,7 +313,7 @@
                 <p>LeetCode376_摆动序列</p>
 <span id="more"></span>
 <p>本题可以用贪心或者动态规划，甚至动态规划看上去好做一点（线段树），但是这里用贪心做法</p>
-<p><img src="../assets/20201124174327597.png" srcset="/img/loading.gif" lazyload alt="376.摆动序列"></p>
+<p><img src="/Assets/20201124174327597.png" srcset="/img/loading.gif" lazyload alt="376.摆动序列"></p>
 <p>局部最优：删除单调坡度上的节点（不包括单调坡度两端的节点），那么这个坡度就可以有两个局部峰值。</p>
 <p>整体最优：整个序列有最多的局部峰值，从而达到最长摆动序列。</p>
 <p>实际上：需要求出峰值的数量即可，让峰值尽量保持峰值，删除单一坡上的结点；用代码表示即计算<code>prediff（nums[i] - nums[i-1]）</code> 和 <code>curdiff（nums[i+1] - nums[i]）</code>；如果<code>prediff&gt;0&amp;&amp;curdiff&lt;0</code>或者<code>prediff&lt;0&amp;&amp;curdiff&gt;0</code>，则需要统计</p>
@@ -321,15 +321,15 @@
 <ol>
 <li>
 <p>上下坡中有平坡，则条件应该改为<code>(preDiff &lt;= 0 &amp;&amp; curDiff &gt; 0) || (preDiff &gt;= 0 &amp;&amp; curDiff &lt; 0)</code></p>
-<p><img src="../assets/20230106170449-20231114103006955.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/Assets/20230106170449-20231114103006955.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 </li>
 <li>
 <p>数组首尾两端，如果序列中只有两个数，则就需要考虑数组最左边和最右边的情况了，比如下面这种，因此<code>prediff = 0 ，curdiff &lt; 0</code> 或者 <code>&gt;0</code> 也记为波谷</p>
-<p><img src="../assets/20201124174357612.png" srcset="/img/loading.gif" lazyload alt="376.摆动序列1"></p>
+<p><img src="/Assets/20201124174357612.png" srcset="/img/loading.gif" lazyload alt="376.摆动序列1"></p>
 </li>
 <li>
 <p>单调坡中有平坡，如图是<code>prediff</code>更新时间的问题</p>
-<p><img src="../assets/20230108171505.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/Assets/20230108171505.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 </li>
 </ol>
 

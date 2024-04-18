@@ -23,16 +23,16 @@
 <meta property="og:site_name" content="Zzl3">
 <meta property="og:description" content="01背包；完全背包；多重背包；分组背包；混合背包">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zzl3.github.io/2023/09/12/assets/image-20230912104603831.png">
-<meta property="og:image" content="https://zzl3.github.io/2023/09/12/assets/image-20230912160007398.png">
-<meta property="og:image" content="https://zzl3.github.io/2023/09/12/assets/8562-20211007092633901-1608550701.png">
-<meta property="og:image" content="https://zzl3.github.io/2023/09/12/assets/image-20230912144746326.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/image-20230912104603831.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/image-20230912160007398.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/8562-20211007092633901-1608550701.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/image-20230912144746326.png">
 <meta property="article:published_time" content="2023-09-12T02:18:09.000Z">
 <meta property="article:modified_time" content="2023-10-12T06:09:46.000Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="背包问题">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zzl3.github.io/2023/09/12/assets/image-20230912104603831.png">
+<meta name="twitter:image" content="https://zzl3.github.io/Assets/image-20230912104603831.png">
   
   
   
@@ -316,8 +316,8 @@
 <li>DP优化一般是对代码或者方程做一个等价变形</li>
 <li>复杂度是状态数量×转移时间</li>
 </ol>
-<p><img src="../assets/image-20230912104603831.png" srcset="/img/loading.gif" lazyload alt="DP问题"></p>
-<p><img src="../assets/image-20230912160007398.png" srcset="/img/loading.gif" lazyload alt="背包问题状态计算"></p>
+<p><img src="/Assets/image-20230912104603831.png" srcset="/img/loading.gif" lazyload alt="DP问题"></p>
+<p><img src="/Assets/image-20230912160007398.png" srcset="/img/loading.gif" lazyload alt="背包问题状态计算"></p>
 <p>背包问题中<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(i,j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>表示物品数量为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>，容量为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span>时候所有物品组合中，价值的最大值<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>A</mi><mi>X</mi></mrow><annotation encoding="application/x-tex">MAX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span></p>
 <h3 id="01背包">01背包</h3>
 <ol>
@@ -329,7 +329,7 @@
 <li>如果<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span>从小到大循环，则原来<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">dp[j]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">p</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span></span>中<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span>小的值会被覆盖掉，则会导致物品<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>在循环过程中被放置很多次</li>
 </ol>
 </li>
-<li><img src="../assets/8562-20211007092633901-1608550701.png" srcset="/img/loading.gif" lazyload alt="图片示例"></li>
+<li><img src="/Assets/8562-20211007092633901-1608550701.png" srcset="/img/loading.gif" lazyload alt="图片示例"></li>
 </ol>
 <h3 id="完全背包">完全背包</h3>
 <ol>
@@ -375,7 +375,7 @@
 <li>优化(滚动数组)：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo><mo>=</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">(</mo><mi>d</mi><mi>p</mi><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo><mo separator="true">,</mo><mi>d</mi><mi>p</mi><mo stretchy="false">[</mo><mi>j</mi><mo>−</mo><mi>w</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo><mo stretchy="false">]</mo><mo>+</mo><mi>v</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">dp[j]=max(dp[j],dp[j−w[i][k]]+v[i][k]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">p</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ma</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mord mathnormal">p</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">p</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">]]</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">]</span></span></span></span></li>
 </ol>
 <h3 id="总结一下">总结一下</h3>
-<p><img src="../assets/image-20230912144746326.png" srcset="/img/loading.gif" lazyload alt="背包问题分类"></p>
+<p><img src="/Assets/image-20230912144746326.png" srcset="/img/loading.gif" lazyload alt="背包问题分类"></p>
 <h4 id="几种问题问法和递推公式">几种问题问法和递推公式</h4>
 <ol>
 <li>能否能装满背包：<code>dp[j] = max(dp[j], dp[j - nums[i]] + nums[i]);</code></li>
