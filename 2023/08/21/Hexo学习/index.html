@@ -1,43 +1,294 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hexo学习 - Zzl3</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Zzl3"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Zzl3"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="下面主要是记录一下用Github+Hexo搭建踩的坑 &amp;amp;&amp;amp; 开始搭建常用的命令"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo学习"><meta property="og:url" content="https://zzl3.github.io/2023/08/21/Hexo%E5%AD%A6%E4%B9%A0/"><meta property="og:site_name" content="Zzl3"><meta property="og:description" content="下面主要是记录一下用Github+Hexo搭建踩的坑 &amp;amp;&amp;amp; 开始搭建常用的命令"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://zzl3.github.io/Assets/image-20230902125637824.png"><meta property="og:image" content="https://zzl3.github.io/Assets/Pasted%20image%2020240418162040.png"><meta property="og:image" content="https://zzl3.github.io/Assets/Pasted%20image%2020240418162427.png"><meta property="article:published_time" content="2023-08-21T09:08:59.000Z"><meta property="article:modified_time" content="2024-12-09T11:07:10.000Z"><meta property="article:author" content="Zzl3"><meta property="article:tag" content="Hexo"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://zzl3.github.io/Assets/image-20230902125637824.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zzl3.github.io/2023/08/21/Hexo%E5%AD%A6%E4%B9%A0/"},"headline":"Hexo学习","image":["https://zzl3.github.io/Assets/image-20230902125637824.png","https://zzl3.github.io/Assets/Pasted%20image%2020240418162040.png","https://zzl3.github.io/Assets/Pasted%20image%2020240418162427.png"],"datePublished":"2023-08-21T09:08:59.000Z","dateModified":"2024-12-09T11:07:10.000Z","author":{"@type":"Person","name":"Zzl3"},"publisher":{"@type":"Organization","name":"Zzl3","logo":{"@type":"ImageObject","url":"https://zzl3.github.io/img/logo.svg"}},"description":"下面主要是记录一下用Github+Hexo搭建踩的坑 &amp;&amp; 开始搭建常用的命令"}</script><link rel="canonical" href="https://zzl3.github.io/2023/08/21/Hexo%E5%AD%A6%E4%B9%A0/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start -->
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Zzl3">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="下面主要是记录一下用Github+Hexo搭建踩的坑 &amp;&amp; 开始搭建常用的命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo学习">
+<meta property="og:url" content="https://zzl3.github.io/2023/08/21/Hexo%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Zzl3">
+<meta property="og:description" content="下面主要是记录一下用Github+Hexo搭建踩的坑 &amp;&amp; 开始搭建常用的命令">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://zzl3.github.io/Assets/image-20230902125637824.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/Pasted%20image%2020240418162040.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/Pasted%20image%2020240418162427.png">
+<meta property="article:published_time" content="2023-08-21T09:08:59.000Z">
+<meta property="article:modified_time" content="2024-12-09T11:07:10.000Z">
+<meta property="article:author" content="Zzl3">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://zzl3.github.io/Assets/image-20230902125637824.png">
+  
+  
+  
+  <title>Hexo学习 - Zzl3</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zzl3.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<body>
+  
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Zzl3" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-08-21T09:08:59.000Z" title="8/21/2023, 5:08:59 PM">2023-08-21</time></span><span class="level-item">Updated&nbsp;<time dateTime="2024-12-09T11:07:10.000Z" title="12/9/2024, 7:07:10 PM">2024-12-09</time></span><span class="level-item"><a class="link-muted" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></span><span class="level-item">10 minutes read (About 1444 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Hexo学习</h1><div class="content"><p>下面主要是记录一下用Github+Hexo搭建踩的坑 &amp;&amp; 开始搭建常用的命令</p>
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Hexo学习"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-08-21 17:08" pubdate>
+          August 21, 2023 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.6k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          14 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Hexo学习</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>下面主要是记录一下用Github+Hexo搭建踩的坑 &amp;&amp; 开始搭建常用的命令</p>
 <span id="more"></span>
 <h2 id="常用命令">常用命令</h2>
 <h3 id="Hexo指令">Hexo指令</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo clean <span class="comment">#删除public文件的内容</span></span><br><span class="line">hexo g <span class="comment">#生成静态文件到public</span></span><br><span class="line">hexo d <span class="comment">#发布静态文件</span></span><br><span class="line">hexo s <span class="comment">#本地运行</span></span><br><span class="line">hexo new post &#123;&#123;文章标题&#125;&#125; <span class="comment">#创建新的文章</span></span><br><span class="line">hexo new page <span class="comment">#source</span></span><br><span class="line">hexo new draft <span class="comment">#source/_drafts</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean <span class="hljs-comment">#删除public文件的内容</span><br>hexo g <span class="hljs-comment">#生成静态文件到public</span><br>hexo d <span class="hljs-comment">#发布静态文件</span><br>hexo s <span class="hljs-comment">#本地运行</span><br>hexo new post &#123;&#123;文章标题&#125;&#125; <span class="hljs-comment">#创建新的文章</span><br>hexo new page <span class="hljs-comment">#source</span><br>hexo new draft <span class="hljs-comment">#source/_drafts</span><br></code></pre></td></tr></table></figure>
 <h3 id="写作指令">写作指令</h3>
 <p><code>tags</code>用法： [标签1, 标签2]<br>
 <code>categories</code>用法：[分类1,分类2]</p>
@@ -45,34 +296,34 @@
 <h3 id="Operation-timed-out">Operation timed out</h3>
 <h4 id="Mac">Mac</h4>
 <p>这个是因为代理的问题，采用终端需要配置代理</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl cip.cc <span class="comment">#查看当前IP地址</span></span><br><span class="line">vi ~/.zshrc <span class="comment">#编辑配置,Mac电脑</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl cip.cc <span class="hljs-comment">#查看当前IP地址</span><br>vi ~/.zshrc <span class="hljs-comment">#编辑配置,Mac电脑</span><br></code></pre></td></tr></table></figure>
 <p>在配置中添加如下内容，这里的端口号需要自行查看自己的网络设置中的端口号</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> proxy=<span class="string">&#x27;export http_proxy=127.0.0.1:7897;export https_proxy=$http_proxy&#x27;</span></span><br><span class="line"><span class="built_in">alias</span> proxyOff=<span class="string">&#x27;unset http_proxy;unset https_proxy&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> proxy=<span class="hljs-string">&#x27;export http_proxy=127.0.0.1:7897;export https_proxy=$http_proxy&#x27;</span><br><span class="hljs-built_in">alias</span> proxyOff=<span class="hljs-string">&#x27;unset http_proxy;unset https_proxy&#x27;</span><br></code></pre></td></tr></table></figure>
 <p>让配置生效</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> ~/.zshrc<br></code></pre></td></tr></table></figure>
 <p>代理模式的开启和关闭</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">proxy <span class="comment">#开启代理模式</span></span><br><span class="line">unproxy <span class="comment">#关闭代理模式</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">proxy <span class="hljs-comment">#开启代理模式</span><br>unproxy <span class="hljs-comment">#关闭代理模式</span><br></code></pre></td></tr></table></figure>
 <h4 id="Windows">Windows</h4>
 <p>设置代理，这里的端口号需要自行查看自己的网络设置中的端口号</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> http_proxy=http://127.0.0.1:7890</span><br><span class="line"><span class="built_in">set</span> https_proxy=http://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> http_proxy=http://127.0.0.1:7890<br><span class="hljs-built_in">set</span> https_proxy=http://127.0.0.1:7890<br></code></pre></td></tr></table></figure>
 <p>还原代理</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> http_proxy=</span><br><span class="line"><span class="built_in">set</span> https_proxy=</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> http_proxy=<br><span class="hljs-built_in">set</span> https_proxy=<br></code></pre></td></tr></table></figure>
 <h3 id="Permission-denied">Permission denied</h3>
 <p>这里是需要把repo的格式改一下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://自己的token@github.com/用户名/用户名.github.io.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">https://自己的token@github.com/用户名/用户名.github.io.git<br></code></pre></td></tr></table></figure>
 <h3 id="插入图片问题">插入图片问题</h3>
 <ol>
 <li>我采用的本地编辑器是typora，首先设置图片路径为如下：</li>
 </ol>
-<p><img src="/Assets/image-20230902125637824.png" alt="image-20230902125637824"></p>
+<p><img src="/Assets/image-20230902125637824.png" srcset="/img/loading.gif" lazyload alt="image-20230902125637824"></p>
 <ol start="2">
 <li>
 <p>在<code>_config.yml</code>配置文件把<code>false</code>改成<code>true</code>。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">post_asset_folder: <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 </li>
 <li>
 <p>安装插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install https://github.com/CodeFalling/hexo-asset-image --save<br></code></pre></td></tr></table></figure>
 </li>
 <li>
 <p>踩的坑：不要在文档上方加<code>typora-root-url:../</code>，解析出来反而不太对</p>
@@ -85,22 +336,22 @@
 <h3 id="Update插入图片问题">Update插入图片问题</h3>
 <p>由于最近入坑了Obsidian，感觉很多文件夹比较繁杂，所以采用统一assets管理图片附件，放在<code>source/Assets</code>下。但是如果在Obsidian采用相对路径<code>/Assets</code>，在主页显示不了，因为它的图片读取路径和本地不一样；但如果将路径改为<code>/Assets</code>则可以读取，这是因为它把<code>source</code>看作根路径了<br>
 同时在Obsidian中，也需要将图片的粘贴路径做如下更改：<br>
-<img src="/Assets/Pasted%20image%2020240418162040.png" alt=""></p>
+<img src="/Assets/Pasted%20image%2020240418162040.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>所以写了一个js文件，在<code>hexo s</code>生成<code>public</code>文件前，把所有<code>/Assets</code>改为<code>/Assets</code>即可，生成后再复原，这样在本地和网页都能显示。<code>js</code>文件如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);  </span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);  </span><br><span class="line"><span class="keyword">const</span> glob = <span class="built_in">require</span>(<span class="string">&#x27;glob&#x27;</span>);  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">const</span> directoryPaths = [  </span><br><span class="line">  <span class="string">&#x27;source/_posts&#x27;</span></span><br><span class="line">];  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">const</span> extension = <span class="string">&#x27;**/*.md&#x27;</span>;</span><br><span class="line">  </span><br><span class="line">directoryPaths.<span class="title function_">forEach</span>(<span class="function"><span class="params">directoryPath</span> =&gt;</span> &#123;  </span><br><span class="line">  <span class="title function_">glob</span>(path.<span class="title function_">join</span>(directoryPath, extension), <span class="function">(<span class="params">err, files</span>) =&gt;</span> &#123;  </span><br><span class="line">    <span class="keyword">if</span> (err) &#123;  </span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">`Error reading <span class="subst">$&#123;directoryPath&#125;</span>:`</span>, err);  </span><br><span class="line">      <span class="keyword">return</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    files.<span class="title function_">forEach</span>(<span class="function"><span class="params">file</span> =&gt;</span> &#123;  </span><br><span class="line">      fs.<span class="title function_">readFile</span>(file, <span class="string">&#x27;utf8&#x27;</span>, <span class="function">(<span class="params">err, data</span>) =&gt;</span> &#123;  </span><br><span class="line">        <span class="keyword">if</span> (err) &#123;  </span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">`Error reading file <span class="subst">$&#123;file&#125;</span>:`</span>, err);  </span><br><span class="line">          <span class="keyword">return</span>;  </span><br><span class="line">        &#125;  </span><br><span class="line">        </span><br><span class="line">        <span class="comment">// const newData = data.replace(/\/Assets/g, &#x27;/Assets&#x27;);  </span></span><br><span class="line">        <span class="keyword">const</span> newData = data.<span class="title function_">replace</span>(<span class="regexp">/\.\.\/Assets/g</span>, <span class="string">&#x27;\/Assets&#x27;</span>);  </span><br><span class="line">  </span><br><span class="line">        fs.<span class="title function_">writeFile</span>(file, newData, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="params">err</span> =&gt;</span> &#123;  </span><br><span class="line">          <span class="keyword">if</span> (err) &#123;  </span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">`Error writing to file <span class="subst">$&#123;file&#125;</span>:`</span>, err);  </span><br><span class="line">            <span class="keyword">return</span>;  </span><br><span class="line">          &#125;  </span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`File <span class="subst">$&#123;file&#125;</span> updated successfully.`</span>);  </span><br><span class="line">        &#125;);  </span><br><span class="line">      &#125;);  </span><br><span class="line">    &#125;);  </span><br><span class="line">  &#125;);  </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>);  <br><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;path&#x27;</span>);  <br><span class="hljs-keyword">const</span> glob = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;glob&#x27;</span>);  <br>  <br><span class="hljs-keyword">const</span> directoryPaths = [  <br>  <span class="hljs-string">&#x27;source/_posts&#x27;</span><br>];  <br>  <br><span class="hljs-keyword">const</span> extension = <span class="hljs-string">&#x27;**/*.md&#x27;</span>;<br>  <br>directoryPaths.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">directoryPath</span> =&gt;</span> &#123;  <br>  <span class="hljs-title function_">glob</span>(path.<span class="hljs-title function_">join</span>(directoryPath, extension), <span class="hljs-function">(<span class="hljs-params">err, files</span>) =&gt;</span> &#123;  <br>    <span class="hljs-keyword">if</span> (err) &#123;  <br>      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">`Error reading <span class="hljs-subst">$&#123;directoryPath&#125;</span>:`</span>, err);  <br>      <span class="hljs-keyword">return</span>;  <br>    &#125;  <br>  <br>    files.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> &#123;  <br>      fs.<span class="hljs-title function_">readFile</span>(file, <span class="hljs-string">&#x27;utf8&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">err, data</span>) =&gt;</span> &#123;  <br>        <span class="hljs-keyword">if</span> (err) &#123;  <br>          <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">`Error reading file <span class="hljs-subst">$&#123;file&#125;</span>:`</span>, err);  <br>          <span class="hljs-keyword">return</span>;  <br>        &#125;  <br>        <br>        <span class="hljs-comment">// const newData = data.replace(/\/Assets/g, &#x27;/Assets&#x27;);  </span><br>        <span class="hljs-keyword">const</span> newData = data.<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/\.\.\/Assets/g</span>, <span class="hljs-string">&#x27;\/Assets&#x27;</span>);  <br>  <br>        fs.<span class="hljs-title function_">writeFile</span>(file, newData, <span class="hljs-string">&#x27;utf8&#x27;</span>, <span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> &#123;  <br>          <span class="hljs-keyword">if</span> (err) &#123;  <br>            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">`Error writing to file <span class="hljs-subst">$&#123;file&#125;</span>:`</span>, err);  <br>            <span class="hljs-keyword">return</span>;  <br>          &#125;  <br>          <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`File <span class="hljs-subst">$&#123;file&#125;</span> updated successfully.`</span>);  <br>        &#125;);  <br>      &#125;);  <br>    &#125;);  <br>  &#125;);  <br>&#125;);<br></code></pre></td></tr></table></figure>
 <h3 id="Latex数学公式显示问题">Latex数学公式显示问题</h3>
 <p>在官网找到对应的设置修改即可</p>
 <ol>
 <li>在主题配置中修改：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">post:</span><br><span class="line">  math:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">    specific: <span class="literal">false</span></span><br><span class="line">    engine: katex</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-markdown-it --save</span><br><span class="line">npm install @traptitech/markdown-it-katex --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">post:<br>  math:<br>    <span class="hljs-built_in">enable</span>: <span class="hljs-literal">true</span><br>    specific: <span class="hljs-literal">false</span><br>    engine: katex<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm uninstall hexo-renderer-marked --save<br>npm install hexo-renderer-markdown-it --save<br>npm install @traptitech/markdown-it-katex --save<br></code></pre></td></tr></table></figure>
 <ol start="2">
 <li>在站点配置中修改：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">markdown:</span><br><span class="line">  plugins:</span><br><span class="line">    - <span class="string">&quot;@traptitech/markdown-it-katex&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">markdown:<br>  plugins:<br>    - <span class="hljs-string">&quot;@traptitech/markdown-it-katex&quot;</span><br></code></pre></td></tr></table></figure>
 <h3 id="文章引用">文章引用</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% post_path filename %&#125;</span><br><span class="line">&#123;% post_link filename [title] [escape] %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs django"><span class="hljs-template-tag">&#123;% <span class="hljs-name">post_path</span> filename %&#125;</span><span class="language-xml"></span><br><span class="language-xml"></span><span class="hljs-template-tag">&#123;% <span class="hljs-name">post_link</span> filename [title] [escape] %&#125;</span><br></code></pre></td></tr></table></figure>
 <ol>
 <li>默认链接文字是文章的标题，也可以自定义要显示的文本</li>
 <li>可以使用 <code>escape</code> 选项，禁止对特殊字符进行转义</li>
@@ -110,56 +361,374 @@
 <li>在模版中添加<code>updated:</code></li>
 <li>添加下面<code>js</code>文件，然后运行，即可更新</li>
 </ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;脚本开始运行..&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>); </span><br><span class="line"><span class="keyword">var</span> file = <span class="string">&quot;./txt&quot;</span>; </span><br><span class="line"><span class="keyword">var</span> <span class="title class_">RegExp</span>=<span class="regexp">/(updated:\s*)((\d&#123;2&#125;(([02468][048])|([13579][26]))[\-\/\s]?((((0?[13578])|(1[02]))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\-\/\s]?((0?[1-9])|([1-2][0-9])))))|(\d&#123;2&#125;(([02468][1235679])|([13579][01345789]))[\-\/\s]?((((0?[13578])|(1[02]))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\-\/\s]?((0?[1-9])|(1[0-9])|(2[0-8]))))))(\s((([0-1][0-9])|(2?[0-3]))\:([0-5]?[0-9])((\s)|(\:([0-5]?[0-9])))))/g</span>;</span><br><span class="line"><span class="keyword">let</span> toppath=<span class="string">&quot;source/_posts/&quot;</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params">path</span>)&#123;</span><br><span class="line">    fs.<span class="title function_">readdir</span>(path,<span class="function">(<span class="params">err,files</span>)=&gt;</span>&#123;</span><br><span class="line">        files.<span class="title function_">forEach</span>(<span class="keyword">function</span>(<span class="params">item</span>)&#123;</span><br><span class="line">            fs.<span class="title function_">stat</span>(path+item+<span class="string">&#x27;/&#x27;</span>,<span class="function">(<span class="params">err,data</span>)=&gt;</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(data.<span class="title function_">isFile</span>())&#123;</span><br><span class="line">                    <span class="keyword">if</span>(item.<span class="title function_">indexOf</span>(<span class="string">&quot;.md&quot;</span>)&gt;-<span class="number">1</span>)&#123;</span><br><span class="line">                        <span class="title function_">writeFileTime</span>(path+item,fs);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="title function_">fn</span>(path+item+<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(toppath)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">writeFileTime</span>(<span class="params">file,fs</span>)&#123;</span><br><span class="line">    fs.<span class="title function_">readFile</span>(file, <span class="string">&#x27;utf8&#x27;</span>,<span class="keyword">function</span>(<span class="params">err, data</span>) &#123; </span><br><span class="line">        <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;读取文件内容错误：&quot;</span>,err);</span><br><span class="line">        <span class="keyword">if</span>(<span class="title class_">RegExp</span>.<span class="title function_">test</span>(data))&#123; </span><br><span class="line">            fs.<span class="title function_">stat</span>(file,<span class="keyword">function</span>(<span class="params">err, stats</span>) &#123; </span><br><span class="line">                <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;读取文件信息错误：&quot;</span>,err);</span><br><span class="line">                <span class="keyword">var</span> updateds=data.<span class="title function_">match</span>(<span class="title class_">RegExp</span>);</span><br><span class="line">                <span class="comment">//console.log(&quot;updated数组:&quot;,updateds);</span></span><br><span class="line">                <span class="keyword">if</span>(updateds.<span class="property">length</span>&gt;<span class="number">1</span>) <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;文件&quot;</span>+file+<span class="string">&quot;匹配到多处update字段&quot;</span>);</span><br><span class="line">                <span class="keyword">var</span> updated=updateds[<span class="number">0</span>].<span class="title function_">replace</span>(<span class="string">&quot;updated: &quot;</span>,<span class="string">&quot;&quot;</span>).<span class="title function_">replace</span>(<span class="regexp">/-/g</span>,<span class="string">&quot;/&quot;</span>);  <span class="comment">//时间格式化为2018/01/29 21:33:30</span></span><br><span class="line">                <span class="comment">//console.log(&quot;updated:&quot;,updated);</span></span><br><span class="line">                <span class="keyword">if</span>(<span class="keyword">new</span> <span class="title class_">Date</span>(stats.<span class="property">mtime</span>).<span class="title function_">getTime</span>()-<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="title class_">Date</span>.<span class="title function_">parse</span>(updated))&gt;<span class="number">1000</span>*<span class="number">60</span>*<span class="number">5</span>)&#123; <span class="comment">// 只要修改时间和文章内updated时间差大于1000毫秒*60*5=5分钟就触发更新</span></span><br><span class="line">                    <span class="keyword">var</span> result= data.<span class="title function_">replace</span>(<span class="title class_">RegExp</span>,<span class="string">&quot;updated: &quot;</span>+<span class="title function_">getFormatDate</span>(stats.<span class="property">mtime</span>)); <span class="comment">//替换更新时间</span></span><br><span class="line">                    fs.<span class="title function_">writeFile</span>(file, result, <span class="string">&#x27;utf8&#x27;</span>,<span class="keyword">function</span>(<span class="params">err</span>) &#123; <span class="comment">//写入新的文件内容</span></span><br><span class="line">                        <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;写文件错误：&quot;</span>,err);</span><br><span class="line">                        fs.<span class="title function_">utimes</span>(file,<span class="keyword">new</span> <span class="title class_">Date</span>(stats.<span class="property">atime</span>),<span class="keyword">new</span> <span class="title class_">Date</span>(stats.<span class="property">mtime</span>),<span class="keyword">function</span>(<span class="params">err</span>)&#123;  <span class="comment">//还原访问时间和修改时间</span></span><br><span class="line">                            <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;修改时间失败：&quot;</span>,err);</span><br><span class="line">                            <span class="variable language_">console</span>.<span class="title function_">log</span>(file,<span class="string">&quot;成功更新时间&quot;</span>);</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> timeStr:时间，格式可为：&quot;September 16,2016 14:15:05、</span></span><br><span class="line"><span class="comment"> &quot;September 16,2016&quot;、&quot;2016/09/16 14:15:05&quot;、&quot;2016/09/16&quot;、</span></span><br><span class="line"><span class="comment"> &#x27;2014-04-23T18:55:49&#x27;和毫秒</span></span><br><span class="line"><span class="comment"> dateSeparator：年、月、日之间的分隔符，默认为&quot;-&quot;，</span></span><br><span class="line"><span class="comment"> timeSeparator：时、分、秒之间的分隔符，默认为&quot;:&quot;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getFormatDate</span>(<span class="params">timeStr, dateSeparator, timeSeparator</span>) &#123;</span><br><span class="line">    dateSeparator = dateSeparator ? dateSeparator : <span class="string">&quot;-&quot;</span>;</span><br><span class="line">    timeSeparator = timeSeparator ? timeSeparator : <span class="string">&quot;:&quot;</span>;</span><br><span class="line">    <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>(timeStr),</span><br><span class="line">        year = date.<span class="title function_">getFullYear</span>(),<span class="comment">// 获取完整的年份(4位,1970)</span></span><br><span class="line">        month = date.<span class="title function_">getMonth</span>(),<span class="comment">// 获取月份(0-11,0代表1月,用的时候记得加上1)</span></span><br><span class="line">        day = date.<span class="title function_">getDate</span>(),<span class="comment">// 获取日(1-31)</span></span><br><span class="line">        hour = date.<span class="title function_">getHours</span>(),<span class="comment">// 获取小时数(0-23)</span></span><br><span class="line">        minute = date.<span class="title function_">getMinutes</span>(),<span class="comment">// 获取分钟数(0-59)</span></span><br><span class="line">        seconds = date.<span class="title function_">getSeconds</span>(),<span class="comment">// 获取秒数(0-59)</span></span><br><span class="line">        Y = year + dateSeparator,</span><br><span class="line">        M = ((month + <span class="number">1</span>) &gt; <span class="number">9</span> ? (month + <span class="number">1</span>) : (<span class="string">&#x27;0&#x27;</span> + (month + <span class="number">1</span>))) + dateSeparator,</span><br><span class="line">        D = (day &gt; <span class="number">9</span> ? day : (<span class="string">&#x27;0&#x27;</span> + day)) + <span class="string">&#x27; &#x27;</span>,</span><br><span class="line">        h = (hour &gt; <span class="number">9</span> ? hour : (<span class="string">&#x27;0&#x27;</span> + hour)) + timeSeparator,</span><br><span class="line">        m = (minute &gt; <span class="number">9</span> ? minute : (<span class="string">&#x27;0&#x27;</span> + minute)) + timeSeparator,</span><br><span class="line">        s = (seconds &gt; <span class="number">9</span> ? seconds : (<span class="string">&#x27;0&#x27;</span> + seconds)),</span><br><span class="line">        formatDate = Y + M + D + h + m + s;</span><br><span class="line">    <span class="keyword">return</span> formatDate;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-meta">#!/usr/bin/env node</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;脚本开始运行..&#x27;</span>);<br><span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>); <br><span class="hljs-keyword">var</span> file = <span class="hljs-string">&quot;./txt&quot;</span>; <br><span class="hljs-keyword">var</span> <span class="hljs-title class_">RegExp</span>=<span class="hljs-regexp">/(updated:\s*)((\d&#123;2&#125;(([02468][048])|([13579][26]))[\-\/\s]?((((0?[13578])|(1[02]))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\-\/\s]?((0?[1-9])|([1-2][0-9])))))|(\d&#123;2&#125;(([02468][1235679])|([13579][01345789]))[\-\/\s]?((((0?[13578])|(1[02]))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\-\/\s]?((0?[1-9])|(1[0-9])|(2[0-8]))))))(\s((([0-1][0-9])|(2?[0-3]))\:([0-5]?[0-9])((\s)|(\:([0-5]?[0-9])))))/g</span>;<br><span class="hljs-keyword">let</span> toppath=<span class="hljs-string">&quot;source/_posts/&quot;</span>;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">fn</span>(<span class="hljs-params">path</span>)&#123;<br>    fs.<span class="hljs-title function_">readdir</span>(path,<span class="hljs-function">(<span class="hljs-params">err,files</span>)=&gt;</span>&#123;<br>        files.<span class="hljs-title function_">forEach</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">item</span>)&#123;<br>            fs.<span class="hljs-title function_">stat</span>(path+item+<span class="hljs-string">&#x27;/&#x27;</span>,<span class="hljs-function">(<span class="hljs-params">err,data</span>)=&gt;</span>&#123;<br>                <span class="hljs-keyword">if</span>(data.<span class="hljs-title function_">isFile</span>())&#123;<br>                    <span class="hljs-keyword">if</span>(item.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&quot;.md&quot;</span>)&gt;-<span class="hljs-number">1</span>)&#123;<br>                        <span class="hljs-title function_">writeFileTime</span>(path+item,fs);<br>                    &#125;<br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    <span class="hljs-title function_">fn</span>(path+item+<span class="hljs-string">&#x27;/&#x27;</span>)<br>                &#125;<br>            &#125;)<br>        &#125;)<br>    &#125;)<br>&#125;<br><span class="hljs-title function_">fn</span>(toppath)<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">writeFileTime</span>(<span class="hljs-params">file,fs</span>)&#123;<br>    fs.<span class="hljs-title function_">readFile</span>(file, <span class="hljs-string">&#x27;utf8&#x27;</span>,<span class="hljs-keyword">function</span>(<span class="hljs-params">err, data</span>) &#123; <br>        <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;读取文件内容错误：&quot;</span>,err);<br>        <span class="hljs-keyword">if</span>(<span class="hljs-title class_">RegExp</span>.<span class="hljs-title function_">test</span>(data))&#123; <br>            fs.<span class="hljs-title function_">stat</span>(file,<span class="hljs-keyword">function</span>(<span class="hljs-params">err, stats</span>) &#123; <br>                <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;读取文件信息错误：&quot;</span>,err);<br>                <span class="hljs-keyword">var</span> updateds=data.<span class="hljs-title function_">match</span>(<span class="hljs-title class_">RegExp</span>);<br>                <span class="hljs-comment">//console.log(&quot;updated数组:&quot;,updateds);</span><br>                <span class="hljs-keyword">if</span>(updateds.<span class="hljs-property">length</span>&gt;<span class="hljs-number">1</span>) <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;文件&quot;</span>+file+<span class="hljs-string">&quot;匹配到多处update字段&quot;</span>);<br>                <span class="hljs-keyword">var</span> updated=updateds[<span class="hljs-number">0</span>].<span class="hljs-title function_">replace</span>(<span class="hljs-string">&quot;updated: &quot;</span>,<span class="hljs-string">&quot;&quot;</span>).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/-/g</span>,<span class="hljs-string">&quot;/&quot;</span>);  <span class="hljs-comment">//时间格式化为2018/01/29 21:33:30</span><br>                <span class="hljs-comment">//console.log(&quot;updated:&quot;,updated);</span><br>                <span class="hljs-keyword">if</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(stats.<span class="hljs-property">mtime</span>).<span class="hljs-title function_">getTime</span>()-<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-title class_">Date</span>.<span class="hljs-title function_">parse</span>(updated))&gt;<span class="hljs-number">1000</span>*<span class="hljs-number">60</span>*<span class="hljs-number">5</span>)&#123; <span class="hljs-comment">// 只要修改时间和文章内updated时间差大于1000毫秒*60*5=5分钟就触发更新</span><br>                    <span class="hljs-keyword">var</span> result= data.<span class="hljs-title function_">replace</span>(<span class="hljs-title class_">RegExp</span>,<span class="hljs-string">&quot;updated: &quot;</span>+<span class="hljs-title function_">getFormatDate</span>(stats.<span class="hljs-property">mtime</span>)); <span class="hljs-comment">//替换更新时间</span><br>                    fs.<span class="hljs-title function_">writeFile</span>(file, result, <span class="hljs-string">&#x27;utf8&#x27;</span>,<span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) &#123; <span class="hljs-comment">//写入新的文件内容</span><br>                        <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;写文件错误：&quot;</span>,err);<br>                        fs.<span class="hljs-title function_">utimes</span>(file,<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(stats.<span class="hljs-property">atime</span>),<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(stats.<span class="hljs-property">mtime</span>),<span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)&#123;  <span class="hljs-comment">//还原访问时间和修改时间</span><br>                            <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;修改时间失败：&quot;</span>,err);<br>                            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(file,<span class="hljs-string">&quot;成功更新时间&quot;</span>);<br>                        &#125;);<br>                    &#125;);<br>                &#125;<br>            &#125;);<br>        &#125;<br>    &#125;);<br>&#125;<br><span class="hljs-comment">/*</span><br><span class="hljs-comment"> timeStr:时间，格式可为：&quot;September 16,2016 14:15:05、</span><br><span class="hljs-comment"> &quot;September 16,2016&quot;、&quot;2016/09/16 14:15:05&quot;、&quot;2016/09/16&quot;、</span><br><span class="hljs-comment"> &#x27;2014-04-23T18:55:49&#x27;和毫秒</span><br><span class="hljs-comment"> dateSeparator：年、月、日之间的分隔符，默认为&quot;-&quot;，</span><br><span class="hljs-comment"> timeSeparator：时、分、秒之间的分隔符，默认为&quot;:&quot;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">getFormatDate</span>(<span class="hljs-params">timeStr, dateSeparator, timeSeparator</span>) &#123;<br>    dateSeparator = dateSeparator ? dateSeparator : <span class="hljs-string">&quot;-&quot;</span>;<br>    timeSeparator = timeSeparator ? timeSeparator : <span class="hljs-string">&quot;:&quot;</span>;<br>    <span class="hljs-keyword">var</span> date = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(timeStr),<br>        year = date.<span class="hljs-title function_">getFullYear</span>(),<span class="hljs-comment">// 获取完整的年份(4位,1970)</span><br>        month = date.<span class="hljs-title function_">getMonth</span>(),<span class="hljs-comment">// 获取月份(0-11,0代表1月,用的时候记得加上1)</span><br>        day = date.<span class="hljs-title function_">getDate</span>(),<span class="hljs-comment">// 获取日(1-31)</span><br>        hour = date.<span class="hljs-title function_">getHours</span>(),<span class="hljs-comment">// 获取小时数(0-23)</span><br>        minute = date.<span class="hljs-title function_">getMinutes</span>(),<span class="hljs-comment">// 获取分钟数(0-59)</span><br>        seconds = date.<span class="hljs-title function_">getSeconds</span>(),<span class="hljs-comment">// 获取秒数(0-59)</span><br>        Y = year + dateSeparator,<br>        M = ((month + <span class="hljs-number">1</span>) &gt; <span class="hljs-number">9</span> ? (month + <span class="hljs-number">1</span>) : (<span class="hljs-string">&#x27;0&#x27;</span> + (month + <span class="hljs-number">1</span>))) + dateSeparator,<br>        D = (day &gt; <span class="hljs-number">9</span> ? day : (<span class="hljs-string">&#x27;0&#x27;</span> + day)) + <span class="hljs-string">&#x27; &#x27;</span>,<br>        h = (hour &gt; <span class="hljs-number">9</span> ? hour : (<span class="hljs-string">&#x27;0&#x27;</span> + hour)) + timeSeparator,<br>        m = (minute &gt; <span class="hljs-number">9</span> ? minute : (<span class="hljs-string">&#x27;0&#x27;</span> + minute)) + timeSeparator,<br>        s = (seconds &gt; <span class="hljs-number">9</span> ? seconds : (<span class="hljs-string">&#x27;0&#x27;</span> + seconds)),<br>        formatDate = Y + M + D + h + m + s;<br>    <span class="hljs-keyword">return</span> formatDate;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h3 id="添加更新时间-更改路径命令">添加更新时间 &amp; 更改路径命令</h3>
 <p>为了方便，直接添加了一个命令来运行，在package中添加<br>
-<img src="/Assets/Pasted%20image%2020240418162427.png" alt=""><br>
+<img src="/Assets/Pasted%20image%2020240418162427.png" srcset="/img/loading.gif" lazyload alt=""><br>
 即可通过<code>npm run my-deploy</code>来执行多个命令</p>
 <h3 id="hexo-d报错">hexo d报错</h3>
 <p>github的问题：fatal: detected dubious ownership in repository<br>
 可以用git config --global --add safe.directory &quot; * &quot;语句</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>Hexo学习</p><p><a href="https://zzl3.github.io/2023/08/21/Hexo学习/">https://zzl3.github.io/2023/08/21/Hexo学习/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Zzl3</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2023-08-21</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2024-12-09</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Hexo/">Hexo</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/09/01/Flowable%E5%AD%A6%E4%B9%A0/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Flowable学习</span></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Zzl3"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Zzl3</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">83</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">14</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">91</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Zzl3" target="_blank" rel="me noopener">Follow</a></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-11T02:29:47.000Z">2024-11-11</time></p><p class="title"><a href="/2024/11/11/DeepML40_Implementing%20a%20Custom%20Dense%20Layer%20in%20Python/">DeepML40_Implementing a Custom Dense Layer in Python</a></p><p class="categories"><a href="/categories/%E9%A2%98%E8%A7%A3/">题解</a> / <a href="/categories/%E9%A2%98%E8%A7%A3/DeepML/">DeepML</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-11T00:11:21.000Z">2024-11-11</time></p><p class="title"><a href="/2024/11/11/DeepML38_Implement%20AdaBoost%20Fit%20Method/">DeepML38_Implement AdaBoost Fit Method</a></p><p class="categories"><a href="/categories/%E9%A2%98%E8%A7%A3/">题解</a> / <a href="/categories/%E9%A2%98%E8%A7%A3/DeepML/">DeepML</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-10T14:18:00.000Z">2024-11-10</time></p><p class="title"><a href="/2024/11/10/DeepML21_Pegasos%20Kernel%20SVM%20Implementation/">DeepML21_Pegasos Kernel SVM Implementation</a></p><p class="categories"><a href="/categories/%E9%A2%98%E8%A7%A3/">题解</a> / <a href="/categories/%E9%A2%98%E8%A7%A3/DeepML/">DeepML</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-10T07:46:39.000Z">2024-11-10</time></p><p class="title"><a href="/2024/11/10/DeepML19_Principal%20Component%20Analysis%20(PCA)/">DeepML19_Principal Component Analysis (PCA)</a></p><p class="categories"><a href="/categories/%E9%A2%98%E8%A7%A3/">题解</a> / <a href="/categories/%E9%A2%98%E8%A7%A3/DeepML/">DeepML</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-10-30T08:02:00.000Z">2024-10-30</time></p><p class="title"><a href="/2024/10/30/AI%E5%B7%A5%E5%85%B7%E6%80%BB%E7%BB%93/">AI工具总结</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">18</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/%E5%85%B6%E4%BB%96%E8%A1%A5%E5%85%85/"><span class="level-start"><span class="level-item">其他补充</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="level-start"><span class="level-item">动态规划</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">基础算法</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">搜索算法</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98/"><span class="level-start"><span class="level-item">数学问题</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/%E6%A0%91%E5%9B%BE%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">树图算法</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/"><span class="level-start"><span class="level-item">贪心</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">贪心算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%A2%98%E8%A7%A3/"><span class="level-start"><span class="level-item">题解</span></span><span class="level-end"><span class="level-item tag">52</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E9%A2%98%E8%A7%A3/AcWing/"><span class="level-start"><span class="level-item">AcWing</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%A2%98%E8%A7%A3/DeepML/"><span class="level-start"><span class="level-item">DeepML</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%A2%98%E8%A7%A3/LeetCode/"><span class="level-start"><span class="level-item">LeetCode</span></span><span class="level-end"><span class="level-item tag">44</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Zzl3" height="28"></a><p class="is-size-7"><span>&copy; 2024 Zzl3</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2024</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "This website uses cookies to improve your experience.",
-          dismiss: "Got it!",
-          allow: "Allow cookies",
-          deny: "Decline",
-          link: "Learn more",
-          policy: "Cookie Policy",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
-        });</script></body></html>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%85%B6%E4%BB%96/" class="category-chain-item">其他</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Hexo学习</div>
+      <div>https://zzl3.github.io/2023/08/21/Hexo学习/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Zzl3</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>August 21, 2023</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/09/01/Flowable%E5%AD%A6%E4%B9%A0/" title="Flowable学习">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Flowable学习</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
