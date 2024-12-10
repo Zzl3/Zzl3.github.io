@@ -28,15 +28,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="AcWing240_食物链">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zzl3.github.io/Assets/image-20231016120958035.png">
-<meta property="og:image" content="https://zzl3.github.io/Assets/image-20231016121028187.png">
-<meta property="og:image" content="https://zzl3.github.io/Assets/image-20231016121632957.png">
+<meta property="og:image" content="https://zzl3.github.io/Assets/acwing.png">
 <meta property="article:published_time" content="2023-10-16T03:29:53.000Z">
-<meta property="article:modified_time" content="2024-12-10T10:24:43.440Z">
+<meta property="article:modified_time" content="2024-12-10T14:16:29.740Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="哈希表">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zzl3.github.io/Assets/image-20231016120958035.png">
+<meta name="twitter:image" content="https://zzl3.github.io/Assets/acwing.png">
   
   
   
@@ -679,7 +677,7 @@
     
       
       
-        <a href="/2024/03/08/LeetCode399-%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC/" title="LeetCode399_除法求值"
+        <a href="/2024/03/08/LeetCode399_%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC/" title="LeetCode399_除法求值"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">LeetCode399_除法求值</span>
@@ -688,7 +686,7 @@
     
       
       
-        <a href="/2024/03/08/LeetCode399_%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC/" title="LeetCode399_除法求值"
+        <a href="/2024/03/08/LeetCode399-%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC/" title="LeetCode399_除法求值"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">LeetCode399_除法求值</span>
@@ -887,16 +885,16 @@
                 <p>AcWing240_食物链</p>
 <span id="more"></span>
 
-<p><img src="/../Assets/image-20231016120958035.png" srcset="/img/loading.gif" lazyload alt="示例"></p>
+<p><img src="/Assets/image-20231016120958035.png" srcset="/img/loading.gif" lazyload alt="示例"></p>
 <p>到根结点的距离有3种情况：</p>
 <ol>
 <li>余1：可以吃根结点</li>
 <li>余2：可以被根结点吃</li>
 <li>余0：与根结点是同类</li>
 </ol>
-<p><img src="/../Assets/image-20231016121028187.png" srcset="/img/loading.gif" lazyload alt="示例"></p>
+<p><img src="/Assets/image-20231016121028187.png" srcset="/img/loading.gif" lazyload alt="示例"></p>
 <p>每个结点存储的是到他父节点的距离，因此需要遍历更新成到根结点的距离（路径压缩）：<code>d[i]</code>的意义是第<code>i</code>个结点到其父结点的距离；在<code>find[]</code>函数的过程中，则会更新为到父节点的距离</p>
-<p><img src="/../Assets/image-20231016121632957.png" srcset="/img/loading.gif" lazyload alt="合并"></p>
+<p><img src="/Assets/image-20231016121632957.png" srcset="/img/loading.gif" lazyload alt="合并"></p>
 <p>合并操作(<code>dx!=dy</code>)时，将<code>x</code>的父节点指向<code>y</code>的父节点：</p>
 <ol>
 <li>$x$和$y$同一类，则有$(d[x]+?)% 3&#x3D;d[y]%3$，有$?&#x3D;d[y]-d[x]$</li>
