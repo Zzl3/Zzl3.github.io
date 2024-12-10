@@ -1,11 +1,13 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
 <head>
+  <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+  
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/my-avatar.jpg">
@@ -16,23 +18,23 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="Zzl3">
   <meta name="keywords" content="">
   
     <meta name="description" content="阳阳&amp;洋洋">
 <meta property="og:type" content="article">
 <meta property="og:title" content="阳阳&amp;洋洋">
-<meta property="og:url" content="http://example.com/2024/12/10/%E9%98%B3%E9%98%B3&%E6%B4%8B%E6%B4%8B/index.html">
+<meta property="og:url" content="https://zzl3.github.io/2024/12/10/%E9%98%B3%E9%98%B3&%E6%B4%8B%E6%B4%8B/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="阳阳&amp;洋洋">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/Assets/e010e939260f3ddf18b95a4948a40bf1_MD5.jpg">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zzl3.github.io/Assets/e010e939260f3ddf18b95a4948a40bf1_MD5.jpg">
 <meta property="article:published_time" content="2024-12-10T06:26:34.000Z">
-<meta property="article:modified_time" content="2024-12-10T06:33:59.330Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2024-12-10T10:24:29.480Z">
+<meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="阳阳">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/Assets/e010e939260f3ddf18b95a4948a40bf1_MD5.jpg">
+<meta name="twitter:image" content="https://zzl3.github.io/Assets/e010e939260f3ddf18b95a4948a40bf1_MD5.jpg">
   
   
   
@@ -70,11 +72,15 @@
 
 
 
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zzl3.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -120,7 +126,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                <span>Home</span>
+                <span>首页</span>
               </a>
             </li>
           
@@ -132,7 +138,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                <span>Archives</span>
+                <span>归档</span>
               </a>
             </li>
           
@@ -144,7 +150,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                <span>Categories</span>
+                <span>分类</span>
               </a>
             </li>
           
@@ -156,7 +162,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                <span>Tags</span>
+                <span>标签</span>
               </a>
             </li>
           
@@ -168,7 +174,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                <span>About</span>
+                <span>关于</span>
               </a>
             </li>
           
@@ -214,7 +220,7 @@
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2024-12-10 14:26" pubdate>
-          December 10, 2024 pm
+          2024年12月10日 下午
         </time>
       </span>
     
@@ -225,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          10 words
+          10 字
         
       </span>
     
@@ -236,7 +242,7 @@
         
         
         
-          1 mins
+          1 分钟
         
       </span>
     
@@ -266,6 +272,175 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="其他"
+        id="heading-0d98c74797e49d00bcc4c17c9d557a2b" role="tab" data-toggle="collapse" href="#collapse-0d98c74797e49d00bcc4c17c9d557a2b"
+        aria-expanded="true"
+      >
+        其他
+        <span class="list-group-count">(14)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-0d98c74797e49d00bcc4c17c9d557a2b"
+           role="tabpanel" aria-labelledby="heading-0d98c74797e49d00bcc4c17c9d557a2b">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/10/30/AI%E5%B7%A5%E5%85%B7%E6%80%BB%E7%BB%93/" title="AI工具总结"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">AI工具总结</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/01/Flowable%E5%AD%A6%E4%B9%A0/" title="Flowable学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Flowable学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/11/git%E5%AD%A6%E4%B9%A0/" title="Git学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Git学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/08/21/Hexo%E5%AD%A6%E4%B9%A0/" title="Hexo学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Hexo学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/10/23/Huggingface%E5%AD%A6%E4%B9%A0/" title="Huggingface学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Huggingface学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/10/12/Jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6/" title="Jetbrains全家桶"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Jetbrains全家桶</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/10/11/Latex%E5%AD%A6%E4%B9%A0/" title="Latex学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Latex学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/19/Mac%E5%AD%A6%E4%B9%A0/" title="Mac学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Mac学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/10/30/Neo4j%E5%AD%A6%E4%B9%A0/" title="Neo4j学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Neo4j学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/15/Notion%E5%AD%A6%E4%B9%A0/" title="Notion学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Notion学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/18/Obsidian%E5%AD%A6%E4%B9%A0/" title="Obsidian学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Obsidian学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/19/VSCode%E5%AD%A6%E4%B9%A0/" title="VSCode学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">VSCode学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/19/WPS%E5%AD%A6%E4%B9%A0/" title="WPS学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">WPS学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/12/10/%E9%98%B3%E9%98%B3&amp;%E6%B4%8B%E6%B4%8B/" title="阳阳&amp;洋洋"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">阳阳&amp;洋洋</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
 
     </div>
 
@@ -279,8 +454,9 @@
               <div class="markdown-body">
                 
                 <!---more-->
-<p>嘿嘿嘿嘿嘿 啦啦啦啦啦</p>
-<p><img src="/Assets/e010e939260f3ddf18b95a4948a40bf1_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+
+<p>嘿嘿嘿嘿嘿<br>啦啦啦啦啦</p>
+<p><img src="/Assets/e010e939260f3ddf18b95a4948a40bf1_MD5.jpg" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -327,31 +503,31 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>阳阳&amp;洋洋</div>
-      <div>http://example.com/2024/12/10/阳阳&amp;洋洋/</div>
+      <div>https://zzl3.github.io/2024/12/10/阳阳&amp;洋洋/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
-          <div>Author</div>
-          <div>John Doe</div>
+          <div>作者</div>
+          <div>Zzl3</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
-          <div>Posted on</div>
-          <div>December 10, 2024</div>
+          <div>发布于</div>
+          <div>2024年12月10日</div>
         </div>
       
       
       
         <div class="license-meta-item">
-          <div>Licensed under</div>
+          <div>许可协议</div>
           <div>
             
               
               
                 <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
                     <i class="iconfont icon-cc-by"></i>
                   </span>
                 </a>
@@ -377,7 +553,7 @@
                     
                       <a href="/2024/11/11/DeepML40_Implementing%20a%20Custom%20Dense%20Layer%20in%20Python/" title="DeepML40_Implementing a Custom Dense Layer in Python">
                         <span class="hidden-mobile">DeepML40_Implementing a Custom Dense Layer in Python</span>
-                        <span class="visible-mobile">Next</span>
+                        <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -398,7 +574,7 @@
     <div id="toc">
   <p class="toc-header">
     <i class="iconfont icon-list"></i>
-    <span>Table of Contents</span>
+    <span>目录</span>
   </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
@@ -460,7 +636,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -468,7 +644,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
@@ -491,6 +667,8 @@
   
   
 </div>
+
+
 
   </footer>
 
@@ -689,7 +867,7 @@
   
 
   <noscript>
-    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
 </body>
 </html>

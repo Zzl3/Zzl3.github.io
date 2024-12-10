@@ -1,11 +1,13 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
 <head>
+  <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+  
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/my-avatar.jpg">
@@ -16,19 +18,19 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="Zzl3">
   <meta name="keywords" content="">
   
     <meta name="description" content="LeetCode1071_字符串的最大公因子">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode1071_字符串的最大公因子">
-<meta property="og:url" content="http://example.com/2024/03/08/LeetCode1071-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90/index.html">
+<meta property="og:url" content="https://zzl3.github.io/2024/03/08/LeetCode1071-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="LeetCode1071_字符串的最大公因子">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-08T06:21:31.000Z">
-<meta property="article:modified_time" content="2024-12-10T06:33:59.330Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2024-12-10T10:24:29.480Z">
+<meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="字符串">
 <meta property="article:tag" content="数字">
 <meta name="twitter:card" content="summary_large_image">
@@ -69,11 +71,15 @@
 
 
 
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zzl3.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -119,7 +125,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                <span>Home</span>
+                <span>首页</span>
               </a>
             </li>
           
@@ -131,7 +137,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                <span>Archives</span>
+                <span>归档</span>
               </a>
             </li>
           
@@ -143,7 +149,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                <span>Categories</span>
+                <span>分类</span>
               </a>
             </li>
           
@@ -155,7 +161,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                <span>Tags</span>
+                <span>标签</span>
               </a>
             </li>
           
@@ -167,7 +173,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                <span>About</span>
+                <span>关于</span>
               </a>
             </li>
           
@@ -213,7 +219,7 @@
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2024-03-08 14:21" pubdate>
-          March 8, 2024 pm
+          2024年3月8日 下午
         </time>
       </span>
     
@@ -224,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          536 words
+          539 字
         
       </span>
     
@@ -235,7 +241,7 @@
         
         
         
-          5 mins
+          5 分钟
         
       </span>
     
@@ -265,6 +271,604 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="题解"
+        id="heading-4161afd7a4e47ddb8376cb63ba58880f" role="tab" data-toggle="collapse" href="#collapse-4161afd7a4e47ddb8376cb63ba58880f"
+        aria-expanded="true"
+      >
+        题解
+        <span class="list-group-count">(52)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-4161afd7a4e47ddb8376cb63ba58880f"
+           role="tabpanel" aria-labelledby="heading-4161afd7a4e47ddb8376cb63ba58880f">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="AcWing"
+        id="heading-beb5f7a9e4de27d5c6be7987245e5075" role="tab" data-toggle="collapse" href="#collapse-beb5f7a9e4de27d5c6be7987245e5075"
+        aria-expanded="false"
+      >
+        AcWing
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-beb5f7a9e4de27d5c6be7987245e5075"
+           role="tabpanel" aria-labelledby="heading-beb5f7a9e4de27d5c6be7987245e5075">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2023/10/16/AcWing240-%E9%A3%9F%E7%89%A9%E9%93%BE/" title="AcWing240_食物链"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">AcWing240_食物链</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/10/17/AcWing842-%E6%8E%92%E5%88%97%E6%95%B0%E5%AD%97/" title="AcWing842_排列数字"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">AcWing842_排列数字</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/10/17/AcWing843-n-%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/" title="AcWing843_n皇后问题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">AcWing843_n皇后问题</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/10/17/AcWing845-%E5%85%AB%E6%95%B0%E7%A0%81/" title="AcWing845_八数码"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">AcWing845_八数码</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="DeepML"
+        id="heading-d890b9d2c75d0e4b72c4c145defb8cef" role="tab" data-toggle="collapse" href="#collapse-d890b9d2c75d0e4b72c4c145defb8cef"
+        aria-expanded="false"
+      >
+        DeepML
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-d890b9d2c75d0e4b72c4c145defb8cef"
+           role="tabpanel" aria-labelledby="heading-d890b9d2c75d0e4b72c4c145defb8cef">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/11/10/DeepML19_Principal%20Component%20Analysis%20(PCA)/" title="DeepML19_Principal Component Analysis (PCA)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DeepML19_Principal Component Analysis (PCA)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/11/10/DeepML21_Pegasos%20Kernel%20SVM%20Implementation/" title="DeepML21_Pegasos Kernel SVM Implementation"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DeepML21_Pegasos Kernel SVM Implementation</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/11/11/DeepML38_Implement%20AdaBoost%20Fit%20Method/" title="DeepML38_Implement AdaBoost Fit Method"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DeepML38_Implement AdaBoost Fit Method</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/11/11/DeepML40_Implementing%20a%20Custom%20Dense%20Layer%20in%20Python/" title="DeepML40_Implementing a Custom Dense Layer in Python"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DeepML40_Implementing a Custom Dense Layer in Python</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="LeetCode"
+        id="heading-071fda8ffed879b16c3308d2133bac46" role="tab" data-toggle="collapse" href="#collapse-071fda8ffed879b16c3308d2133bac46"
+        aria-expanded="true"
+      >
+        LeetCode
+        <span class="list-group-count">(44)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-071fda8ffed879b16c3308d2133bac46"
+           role="tabpanel" aria-labelledby="heading-071fda8ffed879b16c3308d2133bac46">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/03/08/LeetCode1004-%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD1%E7%9A%84%E4%B8%AA%E6%95%B0III/" title="LeetCode1004_最大连续1的个数III"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode1004_最大连续1的个数III</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/12/11/LeetCode105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" title="LeetCode105_从前序与中序遍历序列构造二叉树"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode105_从前序与中序遍历序列构造二叉树</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode1071-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90/" title="LeetCode1071_字符串的最大公因子"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">LeetCode1071_字符串的最大公因子</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/01/16/LeetCode124-%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E8%B7%AF%E5%BE%84%E5%92%8C/" title="LeetCode124_二叉树中的最大路径和"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode124_二叉树中的最大路径和</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/01/17/LeetCode127-%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99/" title="LeetCode127_单词接龙"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode127_单词接龙</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode1372-%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E7%9A%84%E6%9C%80%E9%95%BF%E4%BA%A4%E9%94%99%E8%B7%AF%E5%BE%84/" title="LeetCode1372_二叉树中的最长交错路径"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode1372_二叉树中的最长交错路径</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/10/31/LeetCode142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/" title="LeetCode142_环形链表II"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode142_环形链表II</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode1466-%E9%87%8D%E6%96%B0%E8%A7%84%E5%88%92%E8%B7%AF%E7%BA%BF/" title="LeetCode1466_重新规划路线"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode1466_重新规划路线</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode148-%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8/" title="LeetCode148_排序链表"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode148_排序链表</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode1493-%E5%88%A0%E6%8E%89%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E4%BB%A5%E5%90%8E%E5%85%A8%E4%B8%BA1%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E6%95%B0%E7%BB%84/" title="LeetCode1493_删掉一个元素以后全为1的最长子数组"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode1493_删掉一个元素以后全为1的最长子数组</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/01/19/LeetCode149-%E7%9B%B4%E7%BA%BF%E4%B8%8A%E6%9C%80%E5%A4%9A%E7%9A%84%E7%82%B9%E6%95%B0/" title="LeetCode149_直线上最多的点数"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode149_直线上最多的点数</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode153-%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/" title="LeetCode153_寻找旋转排序数组中的最小值"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode153_寻找旋转排序数组中的最小值</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/11/26/LeetCode15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" title="LeetCode15_三数之和"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode15_三数之和</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/01/19/LeetCode188-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAIV/" title="LeetCode188_买卖股票的最佳时机IV"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode188_买卖股票的最佳时机IV</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode201-%E6%95%B0%E5%AD%97%E8%8C%83%E5%9B%B4%E6%8C%89%E4%BD%8D%E4%B8%8E/" title="LeetCode201_数字范围按位与"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode201_数字范围按位与</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/08/05/LeetCode2071_%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%AE%89%E6%8E%92%E7%9A%84%E6%9C%80%E5%A4%9A%E4%BB%BB%E5%8A%A1%E6%95%B0%E7%9B%AE/" title="LeetCode2071_你可以安排的最多任务数目"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode2071_你可以安排的最多任务数目</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode212-%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2II/" title="LeetCode212_单词搜索II"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode212_单词搜索II</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode236-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" title="LeetCode236_二叉树的最近公共祖先"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode236_二叉树的最近公共祖先</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/11/29/LeetCode240-%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5II/" title="LeetCode240_搜索二维矩阵II"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode240_搜索二维矩阵II</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode2542-%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%88%97%E7%9A%84%E5%88%86%E6%95%B0/" title="LeetCode2542_最大子序列的分数"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode2542_最大子序列的分数</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/01/08/LeetCode30-%E4%B8%B2%E8%81%94%E6%89%80%E6%9C%89%E5%8D%95%E8%AF%8D%E7%9A%84%E5%AD%90%E4%B8%B2/" title="LeetCode30_串联所有单词的子串"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode30_串联所有单词的子串</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/08/09/LeetCode31_%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/" title="LeetCode31_下一个排列"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode31_下一个排列</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode33-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/" title="LeetCode33_搜索旋转排序数组"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode33_搜索旋转排序数组</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/11/14/LeetCode376-%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97/" title="LeetCode376_摆动序列"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode376_摆动序列</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode399_%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC/" title="LeetCode399_除法求值"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode399_除法求值</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode399-%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC/" title="LeetCode399_除法求值"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode399_除法求值</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/08/04/LeetCode402_%E7%A7%BB%E6%8E%89K%E4%BD%8D%E6%95%B0%E5%AD%97/" title="LeetCode402_移掉K位数字"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode402_移掉K位数字</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/11/29/LeetCode41-%E7%BC%BA%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B0/" title="LeetCode41_缺失的第一个正数"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode41_缺失的第一个正数</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/11/26/LeetCode42-%E6%8E%A5%E9%9B%A8%E6%B0%B4/" title="LeetCode42_接雨水"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode42_接雨水</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode437-%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8CIII/" title="LeetCode437_路径总和III"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode437_路径总和III</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/01/09/LeetCode48-%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/" title="LeetCode48_旋转图像"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode48_旋转图像</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode4-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" title="LeetCode4_寻找两个正序数组的中位数"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode4_寻找两个正序数组的中位数</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode649-Dota2%E5%8F%82%E8%AE%AE%E9%99%A2/" title="LeetCode649_Dota2参议院"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode649_Dota2参议院</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode790-%E5%A4%9A%E7%B1%B3%E8%AF%BA%E5%92%8C%E6%89%98%E7%B1%B3%E8%AF%BA%E5%B9%B3%E9%93%BA/" title="LeetCode790_多米诺和托米诺平铺"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode790_多米诺和托米诺平铺</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode875-%E7%88%B1%E5%90%83%E9%A6%99%E8%95%89%E7%9A%84%E7%8F%82%E7%8F%82/" title="LeetCode875_爱吃香蕉的珂珂"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode875_爱吃香蕉的珂珂</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode918-%E7%8E%AF%E5%BD%A2%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/" title="LeetCode918_环形子数组的最大和"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode918_环形子数组的最大和</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/03/08/LeetCode968-%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" title="LeetCode968_监控二叉树"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode968_监控二叉树</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/02/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9802.07-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/" title="LeetCode面试题02.07_链表相交"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode面试题02.07_链表相交</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/02/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9803.05-%E6%A0%88%E6%8E%92%E5%BA%8F/" title="LeetCode面试题03.05_栈排序"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode面试题03.05_栈排序</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/02/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9804.09-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%BA%8F%E5%88%97/" title="LeetCode面试题04.09_二叉搜索树序列"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode面试题04.09_二叉搜索树序列</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/02/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9805.08-%E7%BB%98%E5%88%B6%E7%9B%B4%E7%BA%BF/" title="LeetCode面试题05.08_绘制直线"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode面试题05.08_绘制直线</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/09/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9808.14-%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97/" title="LeetCode面试题08.14_布尔运算"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode面试题08.14_布尔运算</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/11/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9810.03-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84/" title="LeetCode面试题10.03_搜索旋转数组"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode面试题10.03_搜索旋转数组</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/11/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9816.03-%E4%BA%A4%E7%82%B9/" title="LeetCode面试题16.03_交点"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode面试题16.03_交点</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
 
     </div>
 
@@ -277,32 +881,13 @@
             
               <div class="markdown-body">
                 
-                <p>LeetCode1071_字符串的最大公因子 <span id="more"></span> ### 枚举
-答案是某个字符串的前缀，因此可以枚举所有的前缀来判断 设前缀长度为<span
-class="math inline">\(lenz\)</span>，<span
-class="math inline">\(str1\)</span>的长度为<span
-class="math inline">\(len1\)</span>，<span
-class="math inline">\(str2\)</span>的长度为<span
-class="math inline">\(len2\)</span>，则前缀串的长度需要是两个字符串长度的约数才能满足条件。
-即<span class="math inline">\(len1 \mod lenz ==0\)</span>，<span
-class="math inline">\(len2 \mod lenz ==0\)</span>
-所以可以从大到小枚举字符串前缀，代码如下。先判断满足是约数，再判断是否是重复前缀
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">check</span><span class="hljs-params">(string t,string s)</span></span>&#123;<br>        <span class="hljs-type">int</span> lenx = (<span class="hljs-type">int</span>)s.<span class="hljs-built_in">length</span>() / (<span class="hljs-type">int</span>)t.<span class="hljs-built_in">length</span>();<br>        string ans = <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= lenx; ++i)&#123;<br>            ans = ans + t;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans == s;<br>    &#125;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">string <span class="hljs-title">gcdOfStrings</span><span class="hljs-params">(string str1, string str2)</span> </span>&#123;<br>        <span class="hljs-type">int</span> len1 = (<span class="hljs-type">int</span>)str<span class="hljs-number">1.l</span>ength(), len2 = (<span class="hljs-type">int</span>)str<span class="hljs-number">2.l</span>ength();<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-built_in">min</span>(len1, len2); i &gt;= <span class="hljs-number">1</span>; --i)&#123; <span class="hljs-comment">// 从长度大的开始枚举</span><br>            <span class="hljs-keyword">if</span> (len1 % i == <span class="hljs-number">0</span> &amp;&amp; len2 % i == <span class="hljs-number">0</span>)&#123;<br>                string X = str<span class="hljs-number">1.</span><span class="hljs-built_in">substr</span>(<span class="hljs-number">0</span>, i);<br>                <span class="hljs-keyword">if</span> (<span class="hljs-built_in">check</span>(X, str1) &amp;&amp; <span class="hljs-built_in">check</span>(X, str2)) <span class="hljs-keyword">return</span> X;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure> ### 优化
-下面则是需要进行数学公式推导了，如果存在一个符合要求的字符串<code>X</code>，那么一定存在一个符合要求的字符串<code>X'</code>，长度是<code>str1</code>和<code>str2</code>的最大公约数
-因为<span class="math inline">\(X\)</span>经过<span
-class="math inline">\(\frac{len1}{lenz}\)</span>次拼接后得到了<code>str1</code>，<span
-class="math inline">\(X\)</span>又能经过<span
-class="math inline">\(\frac{gcd(len1,len2)}{lenz}\)</span>次拼接后得到长度为<span
-class="math inline">\(gcd(len1,len2)\)</span>的前缀串<span
-class="math inline">\(X&#39;\)</span>，所以可以替换，最终<code>str1</code>会被替换成<span
-class="math inline">\(\frac{len1}{gcd(len1,len2)}\)</span>个<span
-class="math inline">\(X&#39;\)</span>，<code>str2</code>同理
-所以只需要判断长度为<span
-class="math inline">\(gcd(len1,len2)\)</span>的前缀串是否满足要求即可
-代码如下，先求出最大公约数的长度，然后检测最小前缀子串能不能构成最大公约数子串
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">check</span><span class="hljs-params">(string t,string s)</span></span>&#123;<br>        <span class="hljs-type">int</span> lenx = (<span class="hljs-type">int</span>)s.<span class="hljs-built_in">length</span>() / (<span class="hljs-type">int</span>)t.<span class="hljs-built_in">length</span>();<br>        string ans = <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= lenx; ++i)&#123;<br>            ans = ans + t;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans == s;<br>    &#125;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">string <span class="hljs-title">gcdOfStrings</span><span class="hljs-params">(string str1, string str2)</span> </span>&#123;<br>        <span class="hljs-type">int</span> len1 = (<span class="hljs-type">int</span>)str<span class="hljs-number">1.l</span>ength(), len2 = (<span class="hljs-type">int</span>)str<span class="hljs-number">2.l</span>ength();<br>        string T = str<span class="hljs-number">1.</span><span class="hljs-built_in">substr</span>(<span class="hljs-number">0</span>, __gcd(len1,len2)); <span class="hljs-comment">// __gcd() 为c++自带的求最大公约数的函数</span><br>        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">check</span>(T, str1) &amp;&amp; <span class="hljs-built_in">check</span>(T, str2)) <span class="hljs-keyword">return</span> T;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure> ### 数学
-结论：如果<code>str1</code>和<code>str2</code>拼接后等于<code>str2</code>和<code>str1</code>拼接起来的字符串，那么一定存在符合条件的字符串<code>X</code>
-下面省略证明</p>
+                <p>LeetCode1071_字符串的最大公因子</p>
+<span id="more"></span>
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><p>答案是某个字符串的前缀，因此可以枚举所有的前缀来判断<br>设前缀长度为$lenz$，$str1$的长度为$len1$，$str2$的长度为$len2$，则前缀串的长度需要是两个字符串长度的约数才能满足条件。<br>即$len1 \mod lenz &#x3D;&#x3D;0$，$len2 \mod lenz &#x3D;&#x3D;0$<br>所以可以从大到小枚举字符串前缀，代码如下。先判断满足是约数，再判断是否是重复前缀</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">check</span><span class="hljs-params">(string t,string s)</span></span>&#123;<br>        <span class="hljs-type">int</span> lenx = (<span class="hljs-type">int</span>)s.<span class="hljs-built_in">length</span>() / (<span class="hljs-type">int</span>)t.<span class="hljs-built_in">length</span>();<br>        string ans = <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= lenx; ++i)&#123;<br>            ans = ans + t;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans == s;<br>    &#125;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">string <span class="hljs-title">gcdOfStrings</span><span class="hljs-params">(string str1, string str2)</span> </span>&#123;<br>        <span class="hljs-type">int</span> len1 = (<span class="hljs-type">int</span>)str<span class="hljs-number">1.l</span>ength(), len2 = (<span class="hljs-type">int</span>)str<span class="hljs-number">2.l</span>ength();<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-built_in">min</span>(len1, len2); i &gt;= <span class="hljs-number">1</span>; --i)&#123; <span class="hljs-comment">// 从长度大的开始枚举</span><br>            <span class="hljs-keyword">if</span> (len1 % i == <span class="hljs-number">0</span> &amp;&amp; len2 % i == <span class="hljs-number">0</span>)&#123;<br>                string X = str<span class="hljs-number">1.</span><span class="hljs-built_in">substr</span>(<span class="hljs-number">0</span>, i);<br>                <span class="hljs-keyword">if</span> (<span class="hljs-built_in">check</span>(X, str1) &amp;&amp; <span class="hljs-built_in">check</span>(X, str2)) <span class="hljs-keyword">return</span> X;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>下面则是需要进行数学公式推导了，如果存在一个符合要求的字符串<code>X</code>，那么一定存在一个符合要求的字符串<code>X&#39;</code>，长度是<code>str1</code>和<code>str2</code>的最大公约数<br>因为$X$经过$\frac{len1}{lenz}$次拼接后得到了<code>str1</code>，$X$又能经过$\frac{gcd(len1,len2)}{lenz}$次拼接后得到长度为$gcd(len1,len2)$的前缀串$X’$，所以可以替换，最终<code>str1</code>会被替换成$\frac{len1}{gcd(len1,len2)}$个$X’$，<code>str2</code>同理<br>所以只需要判断长度为$gcd(len1,len2)$的前缀串是否满足要求即可<br>代码如下，先求出最大公约数的长度，然后检测最小前缀子串能不能构成最大公约数子串</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">check</span><span class="hljs-params">(string t,string s)</span></span>&#123;<br>        <span class="hljs-type">int</span> lenx = (<span class="hljs-type">int</span>)s.<span class="hljs-built_in">length</span>() / (<span class="hljs-type">int</span>)t.<span class="hljs-built_in">length</span>();<br>        string ans = <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= lenx; ++i)&#123;<br>            ans = ans + t;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans == s;<br>    &#125;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">string <span class="hljs-title">gcdOfStrings</span><span class="hljs-params">(string str1, string str2)</span> </span>&#123;<br>        <span class="hljs-type">int</span> len1 = (<span class="hljs-type">int</span>)str<span class="hljs-number">1.l</span>ength(), len2 = (<span class="hljs-type">int</span>)str<span class="hljs-number">2.l</span>ength();<br>        string T = str<span class="hljs-number">1.</span><span class="hljs-built_in">substr</span>(<span class="hljs-number">0</span>, __gcd(len1,len2)); <span class="hljs-comment">// __gcd() 为c++自带的求最大公约数的函数</span><br>        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">check</span>(T, str1) &amp;&amp; <span class="hljs-built_in">check</span>(T, str2)) <span class="hljs-keyword">return</span> T;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h3 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h3><p>结论：如果<code>str1</code>和<code>str2</code>拼接后等于<code>str2</code>和<code>str1</code>拼接起来的字符串，那么一定存在符合条件的字符串<code>X</code><br>下面省略证明</p>
 
                 
               </div>
@@ -358,31 +943,31 @@ class="math inline">\(gcd(len1,len2)\)</span>的前缀串是否满足要求即�
   <div class="license-box my-3">
     <div class="license-title">
       <div>LeetCode1071_字符串的最大公因子</div>
-      <div>http://example.com/2024/03/08/LeetCode1071-字符串的最大公因子/</div>
+      <div>https://zzl3.github.io/2024/03/08/LeetCode1071-字符串的最大公因子/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
-          <div>Author</div>
-          <div>John Doe</div>
+          <div>作者</div>
+          <div>Zzl3</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
-          <div>Posted on</div>
-          <div>March 8, 2024</div>
+          <div>发布于</div>
+          <div>2024年3月8日</div>
         </div>
       
       
       
         <div class="license-meta-item">
-          <div>Licensed under</div>
+          <div>许可协议</div>
           <div>
             
               
               
                 <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
                     <i class="iconfont icon-cc-by"></i>
                   </span>
                 </a>
@@ -405,7 +990,7 @@ class="math inline">\(gcd(len1,len2)\)</span>的前缀串是否满足要求即�
                       <a href="/2024/03/08/LeetCode4-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" title="LeetCode4_寻找两个正序数组的中位数">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">LeetCode4_寻找两个正序数组的中位数</span>
-                        <span class="visible-mobile">Previous</span>
+                        <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
@@ -414,7 +999,7 @@ class="math inline">\(gcd(len1,len2)\)</span>的前缀串是否满足要求即�
                     
                       <a href="/2024/03/08/LeetCode790-%E5%A4%9A%E7%B1%B3%E8%AF%BA%E5%92%8C%E6%89%98%E7%B1%B3%E8%AF%BA%E5%B9%B3%E9%93%BA/" title="LeetCode790_多米诺和托米诺平铺">
                         <span class="hidden-mobile">LeetCode790_多米诺和托米诺平铺</span>
-                        <span class="visible-mobile">Next</span>
+                        <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -435,7 +1020,7 @@ class="math inline">\(gcd(len1,len2)\)</span>的前缀串是否满足要求即�
     <div id="toc">
   <p class="toc-header">
     <i class="iconfont icon-list"></i>
-    <span>Table of Contents</span>
+    <span>目录</span>
   </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
@@ -497,7 +1082,7 @@ class="math inline">\(gcd(len1,len2)\)</span>的前缀串是否满足要求即�
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -505,7 +1090,7 @@ class="math inline">\(gcd(len1,len2)\)</span>的前缀串是否满足要求即�
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
@@ -528,6 +1113,8 @@ class="math inline">\(gcd(len1,len2)\)</span>的前缀串是否满足要求即�
   
   
 </div>
+
+
 
   </footer>
 
@@ -726,7 +1313,7 @@ class="math inline">\(gcd(len1,len2)\)</span>的前缀串是否满足要求即�
   
 
   <noscript>
-    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
 </body>
 </html>

@@ -1,11 +1,13 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
 <head>
+  <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+  
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/my-avatar.jpg">
@@ -16,19 +18,19 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="Zzl3">
   <meta name="keywords" content="">
   
-    <meta name="description" content="判断奇偶：  奇：(x &amp; 1) &#x3D;&#x3D; 1  ⟺  (x &amp; 1) !&#x3D; 0 偶：(x &amp; 1) &#x3D;&#x3D; 0  ⟺ (x &amp; 1) !&#x3D; 1  乘（或除）以 2 的幂次：  x &gt;&gt; n  ⟺ x &#x2F; 2^n x &lt;&lt; n  ⟺  x * 2^n  去除最后一位 1：x &amp; (x - 1) 得到最后一位 1：x &amp; -x 判">
+    <meta name="description" content="判断奇偶： 奇：(x &amp; 1) &#x3D;&#x3D; 1  ⟺  (x &amp; 1) !&#x3D; 0 偶：(x &amp; 1) &#x3D;&#x3D; 0  ⟺ (x &amp; 1) !&#x3D; 1   乘（或除）以 2 的幂次： x &gt;&gt; n  ⟺ x &#x2F; 2^n x &lt;&lt; n  ⟺  x * 2^n   去除最后一位 1：x &amp; (x - 1) 得到最后一位 1：x &amp; -x 判">
 <meta property="og:type" content="article">
 <meta property="og:title" content="位运算">
-<meta property="og:url" content="http://example.com/2024/06/02/%E4%BD%8D%E8%BF%90%E7%AE%97/index.html">
+<meta property="og:url" content="https://zzl3.github.io/2024/06/02/%E4%BD%8D%E8%BF%90%E7%AE%97/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="判断奇偶：  奇：(x &amp; 1) &#x3D;&#x3D; 1  ⟺  (x &amp; 1) !&#x3D; 0 偶：(x &amp; 1) &#x3D;&#x3D; 0  ⟺ (x &amp; 1) !&#x3D; 1  乘（或除）以 2 的幂次：  x &gt;&gt; n  ⟺ x &#x2F; 2^n x &lt;&lt; n  ⟺  x * 2^n  去除最后一位 1：x &amp; (x - 1) 得到最后一位 1：x &amp; -x 判">
-<meta property="og:locale" content="en_US">
+<meta property="og:description" content="判断奇偶： 奇：(x &amp; 1) &#x3D;&#x3D; 1  ⟺  (x &amp; 1) !&#x3D; 0 偶：(x &amp; 1) &#x3D;&#x3D; 0  ⟺ (x &amp; 1) !&#x3D; 1   乘（或除）以 2 的幂次： x &gt;&gt; n  ⟺ x &#x2F; 2^n x &lt;&lt; n  ⟺  x * 2^n   去除最后一位 1：x &amp; (x - 1) 得到最后一位 1：x &amp; -x 判">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-06-02T07:35:04.000Z">
-<meta property="article:modified_time" content="2024-12-10T06:33:59.330Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2024-12-10T10:24:29.480Z">
+<meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="位运算">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -68,11 +70,15 @@
 
 
 
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zzl3.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -118,7 +124,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                <span>Home</span>
+                <span>首页</span>
               </a>
             </li>
           
@@ -130,7 +136,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                <span>Archives</span>
+                <span>归档</span>
               </a>
             </li>
           
@@ -142,7 +148,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                <span>Categories</span>
+                <span>分类</span>
               </a>
             </li>
           
@@ -154,7 +160,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                <span>Tags</span>
+                <span>标签</span>
               </a>
             </li>
           
@@ -166,7 +172,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                <span>About</span>
+                <span>关于</span>
               </a>
             </li>
           
@@ -212,7 +218,7 @@
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2024-06-02 15:35" pubdate>
-          June 2, 2024 pm
+          2024年6月2日 下午
         </time>
       </span>
     
@@ -223,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          254 words
+          254 字
         
       </span>
     
@@ -234,7 +240,7 @@
         
         
         
-          3 mins
+          3 分钟
         
       </span>
     
@@ -264,6 +270,438 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="算法"
+        id="heading-046a899ee7a6ec88d370211a518c9e80" role="tab" data-toggle="collapse" href="#collapse-046a899ee7a6ec88d370211a518c9e80"
+        aria-expanded="true"
+      >
+        算法
+        <span class="list-group-count">(18)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-046a899ee7a6ec88d370211a518c9e80"
+           role="tabpanel" aria-labelledby="heading-046a899ee7a6ec88d370211a518c9e80">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="其他补充"
+        id="heading-031ff67a2e738f98d5f9996d7ddf2e79" role="tab" data-toggle="collapse" href="#collapse-031ff67a2e738f98d5f9996d7ddf2e79"
+        aria-expanded="true"
+      >
+        其他补充
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-031ff67a2e738f98d5f9996d7ddf2e79"
+           role="tabpanel" aria-labelledby="heading-031ff67a2e738f98d5f9996d7ddf2e79">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/02/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">位运算</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/19/%E5%85%B6%E4%BB%96/" title="其他补充"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">其他补充</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="动态规划"
+        id="heading-8c05890ac8f93d0195f884f1ff4656ec" role="tab" data-toggle="collapse" href="#collapse-8c05890ac8f93d0195f884f1ff4656ec"
+        aria-expanded="false"
+      >
+        动态规划
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-8c05890ac8f93d0195f884f1ff4656ec"
+           role="tabpanel" aria-labelledby="heading-8c05890ac8f93d0195f884f1ff4656ec">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2023/09/14/%E5%85%B6%E4%BB%96DP/" title="其他DP"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">其他DP</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/11/18/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">动态规划</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/12/%E7%BA%BF%E6%80%A7DP/" title="线性DP"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">线性DP</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/12/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="背包问题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">背包问题</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="基础算法"
+        id="heading-cca34e9f468bf2208ec04514e694f17a" role="tab" data-toggle="collapse" href="#collapse-cca34e9f468bf2208ec04514e694f17a"
+        aria-expanded="false"
+      >
+        基础算法
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-cca34e9f468bf2208ec04514e694f17a"
+           role="tabpanel" aria-labelledby="heading-cca34e9f468bf2208ec04514e694f17a">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2023/09/17/STL/" title="STL"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">STL</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/17/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" title="基础算法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基础算法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/16/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="排序算法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">排序算法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数据结构</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="搜索算法"
+        id="heading-cb760e4ee53651c430a7a86b752a5314" role="tab" data-toggle="collapse" href="#collapse-cb760e4ee53651c430a7a86b752a5314"
+        aria-expanded="false"
+      >
+        搜索算法
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-cb760e4ee53651c430a7a86b752a5314"
+           role="tabpanel" aria-labelledby="heading-cb760e4ee53651c430a7a86b752a5314">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2023/11/12/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" title="回溯算法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">回溯算法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/18/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" title="搜索算法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">搜索算法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/18/%E9%80%92%E5%BD%92%E9%97%AE%E9%A2%98/" title="递归问题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">递归问题</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数学问题"
+        id="heading-e3887695ba96b04568bed32a4ecf21e5" role="tab" data-toggle="collapse" href="#collapse-e3887695ba96b04568bed32a4ecf21e5"
+        aria-expanded="false"
+      >
+        数学问题
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-e3887695ba96b04568bed32a4ecf21e5"
+           role="tabpanel" aria-labelledby="heading-e3887695ba96b04568bed32a4ecf21e5">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2023/10/11/%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98/" title="数学问题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数学问题</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="树图算法"
+        id="heading-a0883208175599772c0477f8ea6b50b2" role="tab" data-toggle="collapse" href="#collapse-a0883208175599772c0477f8ea6b50b2"
+        aria-expanded="false"
+      >
+        树图算法
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-a0883208175599772c0477f8ea6b50b2"
+           role="tabpanel" aria-labelledby="heading-a0883208175599772c0477f8ea6b50b2">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2023/11/13/%E4%BA%8C%E5%8F%89%E6%A0%91/" title="二叉树"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">二叉树</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/09/18/%E6%A0%91%E5%92%8C%E5%9B%BE/" title="树图算法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">树图算法</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="贪心"
+        id="heading-1c74aefdf6c8fa046dd3dfdcd5ec42c3" role="tab" data-toggle="collapse" href="#collapse-1c74aefdf6c8fa046dd3dfdcd5ec42c3"
+        aria-expanded="false"
+      >
+        贪心
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-1c74aefdf6c8fa046dd3dfdcd5ec42c3"
+           role="tabpanel" aria-labelledby="heading-1c74aefdf6c8fa046dd3dfdcd5ec42c3">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/04/18/%E8%B4%AA%E5%BF%83%E9%97%AE%E9%A2%98/" title="贪心问题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">贪心问题</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="贪心算法"
+        id="heading-f609d9e1619f07d45b7d493b39e44c77" role="tab" data-toggle="collapse" href="#collapse-f609d9e1619f07d45b7d493b39e44c77"
+        aria-expanded="false"
+      >
+        贪心算法
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-f609d9e1619f07d45b7d493b39e44c77"
+           role="tabpanel" aria-labelledby="heading-f609d9e1619f07d45b7d493b39e44c77">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2023/09/15/%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98/" title="区间问题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">区间问题</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
 
     </div>
 
@@ -278,17 +716,16 @@
                 
                 <!---more-->
 <ul>
-<li>判断奇偶：
-<ul>
+<li>判断奇偶：<ul>
 <li>奇：<code>(x &amp; 1) == 1</code>  ⟺  <code>(x &amp; 1) != 0</code></li>
-<li>偶：<code>(x &amp; 1) == 0</code>  ⟺
-<code>(x &amp; 1) != 1</code></li>
-</ul></li>
-<li>乘（或除）以 2 的幂次：
-<ul>
+<li>偶：<code>(x &amp; 1) == 0</code>  ⟺ <code>(x &amp; 1) != 1</code></li>
+</ul>
+</li>
+<li>乘（或除）以 2 的幂次：<ul>
 <li><code>x &gt;&gt; n </code> ⟺<code> x / 2^n</code></li>
 <li><code>x &lt;&lt; n</code>  ⟺  <code>x * 2^n</code></li>
-</ul></li>
+</ul>
+</li>
 <li>去除最后一位 1：<code>x &amp; (x - 1)</code></li>
 <li>得到最后一位 1：<code>x &amp; -x</code></li>
 <li>判断 2 的幂次：<code>x &amp; (x - 1) == 0</code></li>
@@ -297,15 +734,12 @@
 <li>取绝对值：<code>(x ^ x &gt;&gt; size(x) - 1) - (x &gt;&gt; size(x) - 1)</code>  ⟺  <code>x &lt; 0 ? -x : x</code></li>
 <li>构造 n 个 1：<code>(1 &lt;&lt; n) - 1</code></li>
 <li>将最左边的 n 位清零：<code>x &amp; (~0 &lt;&lt; n)</code></li>
-<li>获取 x 的第 n 位值（0 或
-1）：<code>(x &gt;&gt; n) &amp; 1</code></li>
+<li>获取 x 的第 n 位值（0 或 1）：<code>(x &gt;&gt; n) &amp; 1</code></li>
 <li>获取 x 的第 n 位的幂值：<code>x &amp; (1 &lt;&lt; n)</code></li>
 <li>仅将第 n 位置为 1：<code>x | (1 &lt;&lt; n)</code></li>
 <li>仅将第 n 位置为 0：<code>x &amp; (~(1 &lt;&lt; n))</code></li>
-<li>将 x 最高位至第 n
-位（含）清零：<code>x &amp; ((1 &lt;&lt; n) - 1)</code></li>
-<li>将第 n 位至第 0
-位（含）清零：<code>x &amp; (~((1 &lt;&lt; (n + 1)) - 1))</code></li>
+<li>将 x 最高位至第 n 位（含）清零：<code>x &amp; ((1 &lt;&lt; n) - 1)</code></li>
+<li>将第 n 位至第 0 位（含）清零：<code>x &amp; (~((1 &lt;&lt; (n + 1)) - 1))</code></li>
 <li>取反第 n 位：<code>x ^ (1 &lt;&lt; n)</code></li>
 <li>异或满足交换律、结合律：<code>a ^ b ^ a = b ^ (a ^ a) = b ^ 0 = b</code></li>
 </ul>
@@ -362,31 +796,31 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>位运算</div>
-      <div>http://example.com/2024/06/02/位运算/</div>
+      <div>https://zzl3.github.io/2024/06/02/位运算/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
-          <div>Author</div>
-          <div>John Doe</div>
+          <div>作者</div>
+          <div>Zzl3</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
-          <div>Posted on</div>
-          <div>June 2, 2024</div>
+          <div>发布于</div>
+          <div>2024年6月2日</div>
         </div>
       
       
       
         <div class="license-meta-item">
-          <div>Licensed under</div>
+          <div>许可协议</div>
           <div>
             
               
               
                 <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
                     <i class="iconfont icon-cc-by"></i>
                   </span>
                 </a>
@@ -409,7 +843,7 @@
                       <a href="/2024/06/02/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9805.08-%E7%BB%98%E5%88%B6%E7%9B%B4%E7%BA%BF/" title="LeetCode面试题05.08_绘制直线">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">LeetCode面试题05.08_绘制直线</span>
-                        <span class="visible-mobile">Previous</span>
+                        <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
@@ -418,7 +852,7 @@
                     
                       <a href="/2024/06/02/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9804.09-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%BA%8F%E5%88%97/" title="LeetCode面试题04.09_二叉搜索树序列">
                         <span class="hidden-mobile">LeetCode面试题04.09_二叉搜索树序列</span>
-                        <span class="visible-mobile">Next</span>
+                        <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -439,7 +873,7 @@
     <div id="toc">
   <p class="toc-header">
     <i class="iconfont icon-list"></i>
-    <span>Table of Contents</span>
+    <span>目录</span>
   </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
@@ -501,7 +935,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -509,7 +943,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
@@ -532,6 +966,8 @@
   
   
 </div>
+
+
 
   </footer>
 
@@ -730,7 +1166,7 @@
   
 
   <noscript>
-    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
 </body>
 </html>
