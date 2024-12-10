@@ -8,37 +8,35 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/my-avatar.jpg">
+  <link rel="icon" href="/img/my-avatar.jpg">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Zzl3">
+  <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
     <meta name="description" content="LeetCode面试题03.05-栈排序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode面试题03.05_栈排序">
-<meta property="og:url" content="https://zzl3.github.io/2024/06/02/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9803.05-%E6%A0%88%E6%8E%92%E5%BA%8F/index.html">
-<meta property="og:site_name" content="Zzl3">
+<meta property="og:url" content="http://example.com/2024/06/02/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9803.05-%E6%A0%88%E6%8E%92%E5%BA%8F/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="LeetCode面试题03.05-栈排序">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zzl3.github.io/Assets/3023183ccbebac395d82f52304bcc667_MD5.png">
 <meta property="article:published_time" content="2024-06-02T05:56:30.000Z">
-<meta property="article:modified_time" content="2024-12-09T11:20:28.980Z">
-<meta property="article:author" content="Zzl3">
+<meta property="article:modified_time" content="2024-12-10T06:33:59.330Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="#单调栈">
 <meta property="article:tag" content="#设计">
 <meta property="article:tag" content="#栈">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zzl3.github.io/Assets/3023183ccbebac395d82f52304bcc667_MD5.png">
   
   
   
-  <title>LeetCode面试题03.05_栈排序 - Zzl3</title>
+  <title>LeetCode面试题03.05_栈排序 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -76,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zzl3.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -89,11 +87,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -106,7 +100,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>Zzl3</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -231,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          208 words
+          219 words
         
       </span>
     
@@ -286,36 +280,20 @@
                 
                 <!---more-->
 <h3 id="解法一">解法一</h3>
-<p>对于每次插入的新元素都用辅助栈保证是适合s1的</p>
-<ol>
-<li>比如s1 = {1,5,6,8,9}，插入7</li>
-<li>先把{8,9}插入s2，s2 = {8,9}</li>
-<li>再把7插入s1，s1 = {1,5,6,7}</li>
-<li>再把s2插入s1，s1 = {1,5,6,7,8,9}</li>
-</ol>
-<h3 id="解法二">解法二</h3>
-<p>维护两个栈，原栈为降序，辅助栈为升序</p>
-<ol>
-<li>
-<p>s1 = {8,7,3} s2 = {}</p>
-</li>
-<li>
-<p>插入5，因为比s1.top大，把3插入s2中，5插入s1中</p>
-</li>
-<li>
-<p>s1 = {8,7,5} s2 = {3}</p>
-</li>
-<li>
-<p>对于当前<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>a</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">val</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span>，把s2中比<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>a</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">val</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span>大的放到s1中，把s1中比<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>a</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">val</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span>小的放到s2中<br>
-<img src="/Assets/3023183ccbebac395d82f52304bcc667_MD5.png" srcset="/img/loading.gif" lazyload alt=""><br>
-[[/Assets/LeetCode面试题03.05-栈排序 2024-06-02 14.08.24.excalidraw]]</p>
-</li>
-<li>
-<p>因为所有的元素都是从s1中pop然后push到s2中的，所以s2是降序的</p>
-</li>
-<li>
-<p>这样就没必要在push的时候把s2中元素重新加入到s1中去，只是在pop的时候需要清空s2</p>
-</li>
+<p>对于每次插入的新元素都用辅助栈保证是适合s1的 1. 比如s1 =
+{1,5,6,8,9}，插入7 2. 先把{8,9}插入s2，s2 = {8,9} 3. 再把7插入s1，s1 =
+{1,5,6,7} 4. 再把s2插入s1，s1 = {1,5,6,7,8,9} ### 解法二
+维护两个栈，原栈为降序，辅助栈为升序 1. s1 = {8,7,3} s2 = {} 2.
+插入5，因为比s1.top大，把3插入s2中，5插入s1中 3. s1 = {8,7,5} s2 = {3}
+4. 对于当前<span class="math inline">\(val\)</span>，把s2中比<span
+class="math inline">\(val\)</span>大的放到s1中，把s1中比<span
+class="math inline">\(val\)</span>小的放到s2中 <img
+src="/Assets/3023183ccbebac395d82f52304bcc667_MD5.png" srcset="/img/loading.gif" lazyload />
+[[/Assets/LeetCode面试题03.05-栈排序 2024-06-02
+14.08.24.excalidraw]]</p>
+<ol type="1">
+<li>因为所有的元素都是从s1中pop然后push到s2中的，所以s2是降序的</li>
+<li>这样就没必要在push的时候把s2中元素重新加入到s1中去，只是在pop的时候需要清空s2</li>
 </ol>
 
                 
@@ -374,13 +352,13 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>LeetCode面试题03.05_栈排序</div>
-      <div>https://zzl3.github.io/2024/06/02/LeetCode面试题03.05-栈排序/</div>
+      <div>http://example.com/2024/06/02/LeetCode面试题03.05-栈排序/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>Author</div>
-          <div>Zzl3</div>
+          <div>John Doe</div>
         </div>
       
       
@@ -486,6 +464,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -678,6 +662,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 

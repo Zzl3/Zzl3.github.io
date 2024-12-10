@@ -8,53 +8,52 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/my-avatar.jpg">
+  <link rel="icon" href="/img/my-avatar.jpg">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Zzl3">
+  <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
     <meta name="description" content="LeetCode236_二叉树的最近公共祖先">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode236_二叉树的最近公共祖先">
-<meta property="og:url" content="https://zzl3.github.io/2024/03/08/LeetCode236-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/index.html">
-<meta property="og:site_name" content="Zzl3">
+<meta property="og:url" content="http://example.com/2024/03/08/LeetCode236-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="LeetCode236_二叉树的最近公共祖先">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zzl3.github.io/Assets/073753a317a9c170f8d7e0ddb606d22a_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/059ab27097720531cc583af73ea42203_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/1970b9b325b0a18323a3b3910a9b08ce_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/38e548ecd0f605a3911da1b8dfa3fdeb_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/dfffd4e5fdedc245c28dfdf8dfe6bf9b_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/3496b9a78a368413bc0137cde5569f6a_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/226e3f1f487c76e3d6fd0540bf092452_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/1d56beff719db69ca30a19e7e28d10f7_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/e80d5a7a58459fbdbd6d74e250315366_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/f34b551c8b3ebf719d41af4e819932ee_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/c899b4401dd3fb453c2b0350c12f6151_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/015385717ee62ec7a66c260ab6192690_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/c14b3af16034754ed8abea576eb2016d_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/a8d65058631a88d2da9e075ed0e13b67_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/fa09b35b40b9c9fc469010d9f93a8896_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/a7b66f30d6e44c46b5dc18a36e7e3210_MD5.jpg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/e6ba6cb9f71f347e5d65f35d505033b1_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/059ab27097720531cc583af73ea42203_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/1970b9b325b0a18323a3b3910a9b08ce_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/38e548ecd0f605a3911da1b8dfa3fdeb_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/dfffd4e5fdedc245c28dfdf8dfe6bf9b_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/3496b9a78a368413bc0137cde5569f6a_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/226e3f1f487c76e3d6fd0540bf092452_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/1d56beff719db69ca30a19e7e28d10f7_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/e80d5a7a58459fbdbd6d74e250315366_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/f34b551c8b3ebf719d41af4e819932ee_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/c899b4401dd3fb453c2b0350c12f6151_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/015385717ee62ec7a66c260ab6192690_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/c14b3af16034754ed8abea576eb2016d_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/a8d65058631a88d2da9e075ed0e13b67_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/fa09b35b40b9c9fc469010d9f93a8896_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/a7b66f30d6e44c46b5dc18a36e7e3210_MD5.jpg">
+<meta property="og:image" content="http://example.com/Assets/e6ba6cb9f71f347e5d65f35d505033b1_MD5.jpg">
 <meta property="article:published_time" content="2024-03-08T11:23:42.000Z">
-<meta property="article:modified_time" content="2024-12-09T11:20:28.980Z">
-<meta property="article:author" content="Zzl3">
+<meta property="article:modified_time" content="2024-12-10T06:33:59.330Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="二叉树">
 <meta property="article:tag" content="树">
 <meta property="article:tag" content="深度优先搜索">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zzl3.github.io/Assets/073753a317a9c170f8d7e0ddb606d22a_MD5.jpg">
+<meta name="twitter:image" content="http://example.com/Assets/059ab27097720531cc583af73ea42203_MD5.jpg">
   
   
   
-  <title>LeetCode236_二叉树的最近公共祖先 - Zzl3</title>
+  <title>LeetCode236_二叉树的最近公共祖先 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -92,7 +91,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zzl3.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -105,11 +104,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -122,7 +117,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>Zzl3</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -247,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          432 words
+          423 words
         
       </span>
     
@@ -303,76 +298,94 @@
                 <p>LeetCode236_二叉树的最近公共祖先</p>
 <span id="more"></span>
 <h3 id="思路">思路</h3>
-<p>若<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p,q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>的 最近公共祖先 ，则只可能为以下情况之一：</p>
-<ol>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span>和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>的子树中，且分列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>的 异侧（即分别在左、右子树中）；</li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">p=root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span> ，且 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>的左或右子树中；</li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">q=root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>，且 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span>在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>的左或右子树中；</li>
+<p>若<span class="math inline">\(root\)</span>是<span
+class="math inline">\(p,q\)</span>的 最近公共祖先
+，则只可能为以下情况之一：</p>
+<ol type="1">
+<li><span class="math inline">\(p\)</span>和 <span
+class="math inline">\(q\)</span>在 <span
+class="math inline">\(root\)</span>的子树中，且分列 <span
+class="math inline">\(root\)</span>的
+异侧（即分别在左、右子树中）；</li>
+<li><span class="math inline">\(p=root\)</span> ，且 <span
+class="math inline">\(q\)</span>在 <span
+class="math inline">\(root\)</span>的左或右子树中；</li>
+<li><span class="math inline">\(q=root\)</span>，且 <span
+class="math inline">\(p\)</span>在 <span
+class="math inline">\(root\)</span>的左或右子树中；</li>
 </ol>
 <p>可以这样定义递归函数功能：</p>
-<ol>
-<li>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p,q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>都能找到 返回最近公共祖先</p>
-</li>
-<li>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p,q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>找到一个，返回<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p,q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span></p>
-</li>
-<li>
-<p>都没找到，返回<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>u</mi><mi>l</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">null</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.01968em;">ll</span></span></span></span></p>
-</li>
-<li>
-<p>参数：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>代表当前遍历到的结点；</p>
-</li>
-<li>
-<p>终止条件：</p>
-<ol>
-<li>当越过叶节点，则直接返回<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>u</mi><mi>l</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">null</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.01968em;">ll</span></span></span></span></li>
-<li>当<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi><mo>=</mo><mi>q</mi><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">root = q || p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣∣</span><span class="mord mathnormal">p</span></span></span></span>，则直接返回<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span></li>
-</ol>
-</li>
-<li>
-<p>递推工作：</p>
-<ol>
-<li>递归左结点：返回值记做<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">left</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span></span></span></span></li>
-<li>递归右结点：返回值记做<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">right</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span></span></li>
-</ol>
-</li>
-<li>
-<p>返回值：当前<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>的子树中有没有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">q || p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣∣</span><span class="mord mathnormal">p</span></span></span></span></p>
-<ol>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">left</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">right</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span></span>同时为空：说明左右子树都不包含<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p,q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>，返回<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>u</mi><mi>l</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">null</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.01968em;">ll</span></span></span></span></li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">left</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">right</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span></span>同时不为空：说明<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p,q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>异侧，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>则是最近公共祖先，返回<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span></li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">left</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span></span></span></span>为空，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">right</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span></span>不为空：说明<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p,q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>都不在左子树中，直接返回<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">right</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span></span>
-<ol>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p,q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>其中一个在<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">roo</span><span class="mord mathnormal">t</span></span></span></span>的右子树中，则<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">right</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span></span>就是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">p||q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mord">∣∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span></li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p,q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span>两个节点都在右子树中，则<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">right</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span></span>是公共祖先</li>
+<ol type="1">
+<li><p><span class="math inline">\(p,q\)</span>都能找到
+返回最近公共祖先</p></li>
+<li><p><span class="math inline">\(p,q\)</span>找到一个，返回<span
+class="math inline">\(p,q\)</span></p></li>
+<li><p>都没找到，返回<span class="math inline">\(null\)</span></p></li>
+<li><p>参数：<span
+class="math inline">\(root\)</span>代表当前遍历到的结点；</p></li>
+<li><p>终止条件：</p>
+<ol type="1">
+<li>当越过叶节点，则直接返回<span
+class="math inline">\(null\)</span></li>
+<li>当<span class="math inline">\(root = q ||
+p\)</span>，则直接返回<span class="math inline">\(root\)</span></li>
+</ol></li>
+<li><p>递推工作：</p>
+<ol type="1">
+<li>递归左结点：返回值记做<span class="math inline">\(left\)</span></li>
+<li>递归右结点：返回值记做<span
+class="math inline">\(right\)</span></li>
+</ol></li>
+<li><p>返回值：当前<span
+class="math inline">\(root\)</span>的子树中有没有<span
+class="math inline">\(q || p\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(left\)</span>和<span
+class="math inline">\(right\)</span>同时为空：说明左右子树都不包含<span
+class="math inline">\(p,q\)</span>，返回<span
+class="math inline">\(null\)</span></li>
+<li><span class="math inline">\(left\)</span>和<span
+class="math inline">\(right\)</span>同时不为空：说明<span
+class="math inline">\(p,q\)</span>在<span
+class="math inline">\(root\)</span>异侧，<span
+class="math inline">\(root\)</span>则是最近公共祖先，返回<span
+class="math inline">\(root\)</span></li>
+<li><span class="math inline">\(left\)</span>为空，<span
+class="math inline">\(right\)</span>不为空：说明<span
+class="math inline">\(p,q\)</span>都不在左子树中，直接返回<span
+class="math inline">\(right\)</span>
+<ol type="1">
+<li><span class="math inline">\(p,q\)</span>其中一个在<span
+class="math inline">\(root\)</span>的右子树中，则<span
+class="math inline">\(right\)</span>就是<span
+class="math inline">\(p||q\)</span></li>
+<li><span
+class="math inline">\(p,q\)</span>两个节点都在右子树中，则<span
+class="math inline">\(right\)</span>是公共祖先</li>
 <li>PS：上面这有点难理解，但是如果看图解是可以总结出来的</li>
+</ol></li>
+<li><span class="math inline">\(right\)</span>为空，<span
+class="math inline">\(left\)</span>不为空：和3同理 ### 图解 <img
+src="/Assets/073753a317a9c170f8d7e0ddb606d22a_MD5.jpg" srcset="/img/loading.gif" lazyload /></li>
+</ol></li>
 </ol>
-</li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">right</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span></span>为空，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">left</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span></span></span></span>不为空：和3同理</li>
-</ol>
-</li>
-</ol>
-<h3 id="图解">图解</h3>
-<p><img src="/Assets/073753a317a9c170f8d7e0ddb606d22a_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/059ab27097720531cc583af73ea42203_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/1970b9b325b0a18323a3b3910a9b08ce_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/38e548ecd0f605a3911da1b8dfa3fdeb_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/dfffd4e5fdedc245c28dfdf8dfe6bf9b_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/3496b9a78a368413bc0137cde5569f6a_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/226e3f1f487c76e3d6fd0540bf092452_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/1d56beff719db69ca30a19e7e28d10f7_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/e80d5a7a58459fbdbd6d74e250315366_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/f34b551c8b3ebf719d41af4e819932ee_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/c899b4401dd3fb453c2b0350c12f6151_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/015385717ee62ec7a66c260ab6192690_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/c14b3af16034754ed8abea576eb2016d_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/a8d65058631a88d2da9e075ed0e13b67_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/fa09b35b40b9c9fc469010d9f93a8896_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/a7b66f30d6e44c46b5dc18a36e7e3210_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="/Assets/e6ba6cb9f71f347e5d65f35d505033b1_MD5.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<h3 id="代码">代码</h3>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">TreeNode* <span class="hljs-title">lowestCommonAncestor</span><span class="hljs-params">(TreeNode* root, TreeNode* p, TreeNode* q)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(root == <span class="hljs-literal">nullptr</span> || root == p || root == q) <span class="hljs-keyword">return</span> root;<br>        TreeNode *left = <span class="hljs-built_in">lowestCommonAncestor</span>(root-&gt;left, p, q);<br>        TreeNode *right = <span class="hljs-built_in">lowestCommonAncestor</span>(root-&gt;right, p, q);<br>        <span class="hljs-keyword">if</span>(left == <span class="hljs-literal">nullptr</span> &amp;&amp; right == <span class="hljs-literal">nullptr</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">nullptr</span>; <span class="hljs-comment">// 1.</span><br>        <span class="hljs-keyword">if</span>(left == <span class="hljs-literal">nullptr</span>) <span class="hljs-keyword">return</span> right; <span class="hljs-comment">// 3.</span><br>        <span class="hljs-keyword">if</span>(right == <span class="hljs-literal">nullptr</span>) <span class="hljs-keyword">return</span> left; <span class="hljs-comment">// 4.</span><br>        <span class="hljs-keyword">return</span> root; <span class="hljs-comment">// 2. if(left != null and right != null)</span><br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<p><img src="/Assets/059ab27097720531cc583af73ea42203_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/1970b9b325b0a18323a3b3910a9b08ce_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/38e548ecd0f605a3911da1b8dfa3fdeb_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/dfffd4e5fdedc245c28dfdf8dfe6bf9b_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/3496b9a78a368413bc0137cde5569f6a_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/226e3f1f487c76e3d6fd0540bf092452_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/1d56beff719db69ca30a19e7e28d10f7_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/e80d5a7a58459fbdbd6d74e250315366_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/f34b551c8b3ebf719d41af4e819932ee_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/c899b4401dd3fb453c2b0350c12f6151_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/015385717ee62ec7a66c260ab6192690_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/c14b3af16034754ed8abea576eb2016d_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/a8d65058631a88d2da9e075ed0e13b67_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/fa09b35b40b9c9fc469010d9f93a8896_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/a7b66f30d6e44c46b5dc18a36e7e3210_MD5.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/Assets/e6ba6cb9f71f347e5d65f35d505033b1_MD5.jpg" srcset="/img/loading.gif" lazyload /> ###
+代码 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">TreeNode* <span class="hljs-title">lowestCommonAncestor</span><span class="hljs-params">(TreeNode* root, TreeNode* p, TreeNode* q)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(root == <span class="hljs-literal">nullptr</span> || root == p || root == q) <span class="hljs-keyword">return</span> root;<br>        TreeNode *left = <span class="hljs-built_in">lowestCommonAncestor</span>(root-&gt;left, p, q);<br>        TreeNode *right = <span class="hljs-built_in">lowestCommonAncestor</span>(root-&gt;right, p, q);<br>        <span class="hljs-keyword">if</span>(left == <span class="hljs-literal">nullptr</span> &amp;&amp; right == <span class="hljs-literal">nullptr</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">nullptr</span>; <span class="hljs-comment">// 1.</span><br>        <span class="hljs-keyword">if</span>(left == <span class="hljs-literal">nullptr</span>) <span class="hljs-keyword">return</span> right; <span class="hljs-comment">// 3.</span><br>        <span class="hljs-keyword">if</span>(right == <span class="hljs-literal">nullptr</span>) <span class="hljs-keyword">return</span> left; <span class="hljs-comment">// 4.</span><br>        <span class="hljs-keyword">return</span> root; <span class="hljs-comment">// 2. if(left != null and right != null)</span><br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure></p>
 
                 
               </div>
@@ -430,13 +443,13 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>LeetCode236_二叉树的最近公共祖先</div>
-      <div>https://zzl3.github.io/2024/03/08/LeetCode236-二叉树的最近公共祖先/</div>
+      <div>http://example.com/2024/03/08/LeetCode236-二叉树的最近公共祖先/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>Author</div>
-          <div>Zzl3</div>
+          <div>John Doe</div>
         </div>
       
       
@@ -542,6 +555,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -734,6 +753,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 

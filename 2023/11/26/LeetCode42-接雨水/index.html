@@ -8,37 +8,37 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/my-avatar.jpg">
+  <link rel="icon" href="/img/my-avatar.jpg">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Zzl3">
+  <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
     <meta name="description" content="LeetCode42_接雨水">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode42_接雨水">
-<meta property="og:url" content="https://zzl3.github.io/2023/11/26/LeetCode42-%E6%8E%A5%E9%9B%A8%E6%B0%B4/index.html">
-<meta property="og:site_name" content="Zzl3">
+<meta property="og:url" content="http://example.com/2023/11/26/LeetCode42-%E6%8E%A5%E9%9B%A8%E6%B0%B4/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="LeetCode42_接雨水">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zzl3.github.io/Assets/20210402091208445.png">
-<meta property="og:image" content="https://zzl3.github.io/Assets/20210402091118927.png">
+<meta property="og:image" content="http://example.com/Assets/20210402091208445.png">
+<meta property="og:image" content="http://example.com/Assets/20210402091118927.png">
 <meta property="article:published_time" content="2023-11-26T03:12:37.000Z">
-<meta property="article:modified_time" content="2024-12-09T11:20:28.980Z">
-<meta property="article:author" content="Zzl3">
+<meta property="article:modified_time" content="2024-12-10T06:33:59.330Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="双指针">
 <meta property="article:tag" content="单调栈">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zzl3.github.io/Assets/20210402091208445.png">
+<meta name="twitter:image" content="http://example.com/Assets/20210402091208445.png">
   
   
   
-  <title>LeetCode42_接雨水 - Zzl3</title>
+  <title>LeetCode42_接雨水 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -76,7 +76,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zzl3.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -89,11 +89,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -106,7 +102,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>Zzl3</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -231,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          448 words
+          454 words
         
       </span>
     
@@ -288,19 +284,33 @@
 <span id="more"></span>
 <h3 id="双指针优化解法">双指针优化解法</h3>
 <p>首先搞清楚是横向求还是纵向求：</p>
-<p><img src="/Assets/20210402091208445.png" srcset="/img/loading.gif" lazyload alt="纵向求"></p>
-<p>如果纵向求，则只需要遍历每一列，并且第一个柱子和最后一个不接雨水： 对于每一列，<code>min(lHeight, rHeight) - height</code></p>
-<p>然而超时，所以用双指针优化，对于这一组数据，左边和右边最高高度用数组来记录：<code>maxLeft[i] = max(height[i], maxLeft[i - 1]); maxRight[i] = max(height[i], maxRight[i + 1]);</code> 最后只需要遍历一遍计算即可</p>
+<figure>
+<img src="/Assets/20210402091208445.png" srcset="/img/loading.gif" lazyload alt="纵向求" />
+<figcaption aria-hidden="true">纵向求</figcaption>
+</figure>
+<p>如果纵向求，则只需要遍历每一列，并且第一个柱子和最后一个不接雨水：
+对于每一列，<code>min(lHeight, rHeight) - height</code></p>
+<p>然而超时，所以用双指针优化，对于这一组数据，左边和右边最高高度用数组来记录：<code>maxLeft[i] = max(height[i], maxLeft[i - 1]); maxRight[i] = max(height[i], maxRight[i + 1]);</code>
+最后只需要遍历一遍计算即可</p>
 <h3 id="单调栈解法">单调栈解法</h3>
-<p><img src="/Assets/20210402091118927.png" srcset="/img/loading.gif" lazyload alt="横向求"></p>
-<p>单调栈作用就是求左边 or 右边 最大 or 最小元素；单调栈则是采用的用行来计算雨水，添加元素 &gt; 栈顶元素，则代表出现凹槽，则代表要积累雨水了</p>
+<figure>
+<img src="/Assets/20210402091118927.png" srcset="/img/loading.gif" lazyload alt="横向求" />
+<figcaption aria-hidden="true">横向求</figcaption>
+</figure>
+<p>单调栈作用就是求左边 or 右边 最大 or
+最小元素；单调栈则是采用的用行来计算雨水，添加元素 &gt;
+栈顶元素，则代表出现凹槽，则代表要积累雨水了</p>
 <p>这个单调栈从栈头到栈底应该是从小到大的；栈头第一个代表凹槽底部元素；第二个代表凹槽左边柱子；添加元素代表凹槽右边柱子</p>
 <p>栈内保存柱子下标即可，因为要算宽度，高度根据数组获取即可</p>
 <p>从左到右遍历，分成三种情况：</p>
 <ul>
-<li>情况一：当前遍历的元素（柱子）高度小于栈顶元素的高度 <code>height[i] &lt; height[st.top()]</code>，直接入栈</li>
-<li>情况二：当前遍历的元素（柱子）高度等于栈顶元素的高度 <code>height[i] == height[st.top()]</code>，需要弹出顶部再入栈（因为左边需要计算最右边的宽度） - 但是可以忽略这个情况，遍历来看是对的</li>
-<li>情况三：当前遍历的元素（柱子）高度大于栈顶元素的高度 <code>height[i] &gt; height[st.top()]</code>，则需要计算积水面积了，</li>
+<li>情况一：当前遍历的元素（柱子）高度小于栈顶元素的高度
+<code>height[i] &lt; height[st.top()]</code>，直接入栈</li>
+<li>情况二：当前遍历的元素（柱子）高度等于栈顶元素的高度
+<code>height[i] == height[st.top()]</code>，需要弹出顶部再入栈（因为左边需要计算最右边的宽度）
+- 但是可以忽略这个情况，遍历来看是对的</li>
+<li>情况三：当前遍历的元素（柱子）高度大于栈顶元素的高度
+<code>height[i] &gt; height[st.top()]</code>，则需要计算积水面积了，</li>
 </ul>
 <p>单调栈的思路比较难理解，但是如果遍历来看，其实是对的</p>
 
@@ -358,13 +368,13 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>LeetCode42_接雨水</div>
-      <div>https://zzl3.github.io/2023/11/26/LeetCode42-接雨水/</div>
+      <div>http://example.com/2023/11/26/LeetCode42-接雨水/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>Author</div>
-          <div>Zzl3</div>
+          <div>John Doe</div>
         </div>
       
       
@@ -470,6 +480,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -662,6 +678,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 

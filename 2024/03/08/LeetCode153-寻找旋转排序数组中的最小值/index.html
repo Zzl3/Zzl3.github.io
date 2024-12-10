@@ -8,37 +8,33 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/my-avatar.jpg">
+  <link rel="icon" href="/img/my-avatar.jpg">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Zzl3">
+  <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
     <meta name="description" content="LeetCode153_寻找旋转排序数组中的最小值">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode153_寻找旋转排序数组中的最小值">
-<meta property="og:url" content="https://zzl3.github.io/2024/03/08/LeetCode153-%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/index.html">
-<meta property="og:site_name" content="Zzl3">
+<meta property="og:url" content="http://example.com/2024/03/08/LeetCode153-%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="LeetCode153_寻找旋转排序数组中的最小值">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zzl3.github.io/Assets/1706172298100-68eb1f13-d22b-4902-902e-938f7ca1408b.jpeg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/1706172439538-f8b1d926-4002-4c90-a9f3-fbdb7e8b1f3b.jpeg">
-<meta property="og:image" content="https://zzl3.github.io/Assets/1706172535057-c2a505b0-b7fc-4231-be2a-3432b04dfafc.jpeg">
 <meta property="article:published_time" content="2024-03-08T11:21:13.000Z">
-<meta property="article:modified_time" content="2024-12-09T11:20:28.980Z">
-<meta property="article:author" content="Zzl3">
+<meta property="article:modified_time" content="2024-12-10T06:33:59.330Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="二分查找">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zzl3.github.io/Assets/1706172298100-68eb1f13-d22b-4902-902e-938f7ca1408b.jpeg">
   
   
   
-  <title>LeetCode153_寻找旋转排序数组中的最小值 - Zzl3</title>
+  <title>LeetCode153_寻找旋转排序数组中的最小值 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -76,7 +72,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zzl3.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -89,11 +85,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -106,7 +98,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>Zzl3</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -231,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          586 words
+          588 words
         
       </span>
     
@@ -289,18 +281,36 @@
 <h3 id="思路">思路</h3>
 <p>假设数组最后一个值是<code>x</code>，那么最小值左边的都是<code>&gt;x</code>的，右边的都是<code>&lt;x</code>的</p>
 <p>那么左中右三个指针相比较有下面几种情况：</p>
-<ol>
-<li>左值 &lt; 中值, 中值 &gt; 右值 ：有旋转，最小值在右半边，可以收缩左边界</li>
+<ol type="1">
+<li>左值 &lt; 中值, 中值 &gt; 右值
+：有旋转，最小值在右半边，可以收缩左边界</li>
 </ol>
-<p><img src="/Assets/1706172298100-68eb1f13-d22b-4902-902e-938f7ca1408b.jpeg" srcset="/img/loading.gif" lazyload alt="img"></p>
-<ol>
-<li>左值 &lt; 中值, 中值 &lt; 右值 ：没有旋转，最小值在最左边，可以收缩右边界</li>
+<figure>
+<img
+src="/Assets/1706172298100-68eb1f13-d22b-4902-902e-938f7ca1408b.jpeg" srcset="/img/loading.gif" lazyload
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<ol type="1">
+<li>左值 &lt; 中值, 中值 &lt; 右值
+：没有旋转，最小值在最左边，可以收缩右边界</li>
 </ol>
-<p><img src="/Assets/1706172439538-f8b1d926-4002-4c90-a9f3-fbdb7e8b1f3b.jpeg" srcset="/img/loading.gif" lazyload alt="img"></p>
-<ol>
-<li>左值 &gt; 中值, 中值 &lt; 右值 ：有旋转，最小值在左半边，可以收缩右边界</li>
+<figure>
+<img
+src="/Assets/1706172439538-f8b1d926-4002-4c90-a9f3-fbdb7e8b1f3b.jpeg" srcset="/img/loading.gif" lazyload
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<ol type="1">
+<li>左值 &gt; 中值, 中值 &lt; 右值
+：有旋转，最小值在左半边，可以收缩右边界</li>
 </ol>
-<p><img src="/Assets/1706172535057-c2a505b0-b7fc-4231-be2a-3432b04dfafc.jpeg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<figure>
+<img
+src="/Assets/1706172535057-c2a505b0-b7fc-4231-be2a-3432b04dfafc.jpeg" srcset="/img/loading.gif" lazyload
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
 <ul>
 <li>情况2、3是一类，情况1是另一类</li>
 <li>如果中值 &lt; 右值，则最小值在左半边，可以收缩右边界。</li>
@@ -309,7 +319,7 @@
 <h3 id="代码">代码</h3>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">findMin</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> right = nums.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">while</span> (left &lt; right) &#123;<br>            <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;<br>            <span class="hljs-keyword">if</span> (nums[mid] &gt; nums[right]) &#123;      <span class="hljs-comment">// 因为 中值&gt;右值，所以中值肯定不是最小值</span><br>                left = mid + <span class="hljs-number">1</span>; <br>            &#125; <span class="hljs-keyword">else</span> &#123;                            <span class="hljs-comment">// 因为 中值&lt;右值，所以中值有可能是最小值</span><br>                right = mid;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> nums[left];<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 <p>是用二分查找，只不过是 中间值 和 右边界 在比较；下面是代码分析</p>
-<ol>
+<ol type="1">
 <li>是左闭右闭</li>
 <li>中间位置<code>mid</code>更靠近<code>left</code></li>
 <li>如果左右数组重合，即<code>left=right</code>，即只有一个数</li>
@@ -376,13 +386,13 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>LeetCode153_寻找旋转排序数组中的最小值</div>
-      <div>https://zzl3.github.io/2024/03/08/LeetCode153-寻找旋转排序数组中的最小值/</div>
+      <div>http://example.com/2024/03/08/LeetCode153-寻找旋转排序数组中的最小值/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>Author</div>
-          <div>Zzl3</div>
+          <div>John Doe</div>
         </div>
       
       
@@ -488,6 +498,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -680,6 +696,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 

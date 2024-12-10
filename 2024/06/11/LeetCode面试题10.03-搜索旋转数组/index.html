@@ -8,41 +8,40 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/my-avatar.jpg">
+  <link rel="icon" href="/img/my-avatar.jpg">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Zzl3">
+  <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
     <meta name="description" content="LeetCode面试题10.03-搜索旋转数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode面试题10.03_搜索旋转数组">
-<meta property="og:url" content="https://zzl3.github.io/2024/06/11/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9810.03-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84/index.html">
-<meta property="og:site_name" content="Zzl3">
+<meta property="og:url" content="http://example.com/2024/06/11/LeetCode%E9%9D%A2%E8%AF%95%E9%A2%9810.03-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="LeetCode面试题10.03-搜索旋转数组">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zzl3.github.io/Assets/bfdd7661cec500124940d4a7f4a3f470_MD5.png">
-<meta property="og:image" content="https://zzl3.github.io/Assets/Pasted%20image%2020240611122805.png">
-<meta property="og:image" content="https://zzl3.github.io/Assets/7c50bbfcc4beb080ec683d84668cba15_MD5.png">
-<meta property="og:image" content="https://zzl3.github.io/Assets/6a134bc5dde1706d848d250595ea22c8_MD5.png">
-<meta property="og:image" content="https://zzl3.github.io/Assets/3f6e241138464c4de1b18008d41336d2_MD5.png">
-<meta property="og:image" content="https://zzl3.github.io/Assets/a61ebb119ac75dd5a4a0c8424d1952b0_MD5.png">
+<meta property="og:image" content="http://example.com/Assets/Pasted%20image%2020240611122805.png">
+<meta property="og:image" content="http://example.com/Assets/7c50bbfcc4beb080ec683d84668cba15_MD5.png">
+<meta property="og:image" content="http://example.com/Assets/6a134bc5dde1706d848d250595ea22c8_MD5.png">
+<meta property="og:image" content="http://example.com/Assets/3f6e241138464c4de1b18008d41336d2_MD5.png">
+<meta property="og:image" content="http://example.com/Assets/a61ebb119ac75dd5a4a0c8424d1952b0_MD5.png">
 <meta property="article:published_time" content="2024-06-11T04:14:38.000Z">
-<meta property="article:modified_time" content="2024-12-09T11:20:28.980Z">
-<meta property="article:author" content="Zzl3">
+<meta property="article:modified_time" content="2024-12-10T06:33:59.330Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="#数组">
 <meta property="article:tag" content="#二分查找">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zzl3.github.io/Assets/bfdd7661cec500124940d4a7f4a3f470_MD5.png">
+<meta name="twitter:image" content="http://example.com/Assets/Pasted%20image%2020240611122805.png">
   
   
   
-  <title>LeetCode面试题10.03_搜索旋转数组 - Zzl3</title>
+  <title>LeetCode面试题10.03_搜索旋转数组 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -80,7 +79,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zzl3.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -93,11 +92,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -110,7 +105,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>Zzl3</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -235,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          519 words
+          522 words
         
       </span>
     
@@ -291,64 +286,59 @@
                 <!---more-->
 <p>根据题解总结旋转数组相关题目，都是二分法</p>
 <h3 id="一">一</h3>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-array/description/">https://leetcode.cn/problems/rotate-array/description/</a><br>
-<img src="/Assets/bfdd7661cec500124940d4a7f4a3f470_MD5.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<ol>
+<p>https://leetcode.cn/problems/rotate-array/description/ <img
+src="/Assets/bfdd7661cec500124940d4a7f4a3f470_MD5.png" srcset="/img/loading.gif" lazyload /></p>
+<ol type="1">
 <li>向右移动的位置k可能会大于n，因此对m取余</li>
 <li>先将整个数组反转，再将前k个反转，再将后n-k个反转</li>
 </ol>
 <h3 id="二">二</h3>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/description/">https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/description/</a><br>
-<img src="/Assets/Pasted%20image%2020240611122805.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<ol>
-<li>nums中所有整数都是唯一的</li>
-<li>nums原来是一个升序排列的数组，但在预先未知的某个点上进行了旋转</li>
-<li>二分法<br>
-1. <code>nums[mid] &gt; nums[right]</code>，如<code>[3,4,5,1,2]</code>，则左侧是有序上升的，最小值在右侧<br>
-2. <code>nums[mid] &lt;= nums[right]</code>，如<code>[6,7,1,2,3,4,5]</code>，则右侧是有序上升的，最小值在左侧</li>
-</ol>
+<p>https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/description/
+<img src="/Assets/Pasted%20image%2020240611122805.png" srcset="/img/loading.gif" lazyload /> 1.
+nums中所有整数都是唯一的 2.
+nums原来是一个升序排列的数组，但在预先未知的某个点上进行了旋转 3. 二分法
+1.
+<code>nums[mid] &gt; nums[right]</code>，如<code>[3,4,5,1,2]</code>，则左侧是有序上升的，最小值在右侧
+2.
+<code>nums[mid] &lt;= nums[right]</code>，如<code>[6,7,1,2,3,4,5]</code>，则右侧是有序上升的，最小值在左侧</p>
 <h3 id="三">三</h3>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/description/">https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/description/</a><br>
-<img src="/Assets/7c50bbfcc4beb080ec683d84668cba15_MD5.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<ol>
+<p>https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/description/
+<img src="/Assets/7c50bbfcc4beb080ec683d84668cba15_MD5.png" srcset="/img/loading.gif" lazyload /></p>
+<ol type="1">
 <li>和<strong>二</strong>相比，就是数组中有重复值</li>
 <li>二分法
-<ol>
+<ol type="1">
 <li><code>nums[mid] &gt; nums[right]</code>，如<code>[3,4,5,1,2]</code>，则左侧是有序上升的，最小值在右侧</li>
 <li><code>nums[mid] &lt; nums[right]</code>，如<code>[6,7,1,2,3,4,5]</code>，则右侧是有序上升的，最小值在左侧</li>
 <li><code>nums[mid] == nums[right]</code>，如<code>[2,3,1,1,1]</code>，重复数字可能是最小值，也可能最小值在左侧，所以<code>right</code>左移</li>
-</ol>
-</li>
+</ol></li>
 </ol>
 <h3 id="四">四</h3>
-<p><a target="_blank" rel="noopener" href="https://xleetcode.cn/problems/search-in-rotated-sorted-array/description/">https://xleetcode.cn/problems/search-in-rotated-sorted-array/description/</a><br>
-<img src="/Assets/6a134bc5dde1706d848d250595ea22c8_MD5.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>分为左半部分有序和右半部分有序；最终找到目标值</p>
-<h3 id="五">五</h3>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/description/">https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/description/</a><br>
-<img src="/Assets/3f6e241138464c4de1b18008d41336d2_MD5.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<ol>
+<p>https://xleetcode.cn/problems/search-in-rotated-sorted-array/description/
+<img src="/Assets/6a134bc5dde1706d848d250595ea22c8_MD5.png" srcset="/img/loading.gif" lazyload /></p>
+<p>分为左半部分有序和右半部分有序；最终找到目标值 ### 五
+https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/description/
+<img src="/Assets/3f6e241138464c4de1b18008d41336d2_MD5.png" srcset="/img/loading.gif" lazyload /></p>
+<ol type="1">
 <li>和<strong>四</strong>相比是添加了重复值</li>
 <li>重点在于处理重复数字
-<ol>
+<ol type="1">
 <li>左边有重复，将左边界右移</li>
 <li>右边有重复，将右边界左移</li>
 <li>然后按照左半部分和右半部分有序来分</li>
-</ol>
-</li>
+</ol></li>
 </ol>
 <h3 id="六">六</h3>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-rotate-array-lcci/description/">https://leetcode.cn/problems/search-rotate-array-lcci/description/</a><br>
-<img src="/Assets/a61ebb119ac75dd5a4a0c8424d1952b0_MD5.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<ol>
+<p>https://leetcode.cn/problems/search-rotate-array-lcci/description/
+<img src="/Assets/a61ebb119ac75dd5a4a0c8424d1952b0_MD5.png" srcset="/img/loading.gif" lazyload /></p>
+<ol type="1">
 <li>和<strong>五</strong>很像，区别是<strong>五</strong>是只要存在target就返回true，而这道题要返回多个重复target中最靠前的那个</li>
 <li>边界条件很多
-<ol>
+<ol type="1">
 <li>当<code>left</code>符合条件时直接返回，因为找的是最小的索引</li>
 <li>当中间值等于目标值，将右边界移到中间，因为左边可能还有相等的值</li>
 <li>当中间数字与左边数字相等时，将左边界右移</li>
-</ol>
-</li>
+</ol></li>
 </ol>
 
                 
@@ -405,13 +395,13 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>LeetCode面试题10.03_搜索旋转数组</div>
-      <div>https://zzl3.github.io/2024/06/11/LeetCode面试题10.03-搜索旋转数组/</div>
+      <div>http://example.com/2024/06/11/LeetCode面试题10.03-搜索旋转数组/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>Author</div>
-          <div>Zzl3</div>
+          <div>John Doe</div>
         </div>
       
       
@@ -517,6 +507,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -709,6 +705,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
