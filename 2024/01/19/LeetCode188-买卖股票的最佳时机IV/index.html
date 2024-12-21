@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zzl3.github.io/Assets/leetcode.png">
 <meta property="article:published_time" content="2024-01-19T11:23:42.000Z">
-<meta property="article:modified_time" content="2024-12-10T14:20:15.020Z">
+<meta property="article:modified_time" content="2024-12-21T13:21:52.260Z">
 <meta property="article:author" content="Zzl3">
 <meta property="article:tag" content="数组">
 <meta property="article:tag" content="动态规划">
@@ -888,7 +888,7 @@
 
 <p>这道题看了一个状态机DP的题解</p>
 <h3 id="不限交易次数"><a href="#不限交易次数" class="headerlink" title="不限交易次数"></a>不限交易次数</h3><h4 id="122-买卖股票的最佳时机-II"><a href="#122-买卖股票的最佳时机-II" class="headerlink" title="122. 买卖股票的最佳时机 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">122. 买卖股票的最佳时机 II</a></h4><p>关键是：第<code>i</code>天，持有&#x2F; 未持有股票的最大利润<br>子问题：第<code>i-1</code>天，持有&#x2F; 未持有股票的最大利润</p>
-<p>定义<code>dfs(i,0)</code>表示第<code>i</code>天结束时，未持有股票的最大利润<br>定义<code>dfs(i,1)</code>表示第<code>i</code>天结束时，持有股票的最大利润<br>![[..&#x2F;Assets&#x2F;adf3b8dd1ad85968a2fd7110ec7ff099_MD5.png]]</p>
+<p>定义<code>dfs(i,0)</code>表示第<code>i</code>天结束时，未持有股票的最大利润<br>定义<code>dfs(i,1)</code>表示第<code>i</code>天结束时，持有股票的最大利润<br>![[&#x2F;Assets&#x2F;adf3b8dd1ad85968a2fd7110ec7ff099_MD5.png]]</p>
 <ol>
 <li>递归式子</li>
 </ol>
@@ -904,9 +904,9 @@
 <blockquote>
 <p>递推可以由递归得到 <code>f[i][0]</code>和<code>f[i][1]</code></p>
 </blockquote>
-<h4 id="309-买卖股票的最佳时机含冷冻期"><a href="#309-买卖股票的最佳时机含冷冻期" class="headerlink" title="309. 买卖股票的最佳时机含冷冻期"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309. 买卖股票的最佳时机含冷冻期</a></h4><p>因为买入的时候不能从前一天获得，所以直接改成<code>i-2</code>即可<br>![[..&#x2F;Assets&#x2F;31149733ba10e074964e1cf950142ca6_MD5.png]]</p>
+<h4 id="309-买卖股票的最佳时机含冷冻期"><a href="#309-买卖股票的最佳时机含冷冻期" class="headerlink" title="309. 买卖股票的最佳时机含冷冻期"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309. 买卖股票的最佳时机含冷冻期</a></h4><p>因为买入的时候不能从前一天获得，所以直接改成<code>i-2</code>即可<br>![[&#x2F;Assets&#x2F;31149733ba10e074964e1cf950142ca6_MD5.png]]</p>
 <h3 id="限制交易次数"><a href="#限制交易次数" class="headerlink" title="限制交易次数"></a>限制交易次数</h3><p>【至多&#x2F; 正好&#x2F; 至少】交易<code>k</code>次<br>多了一个<code>j</code>来记录交易次数</p>
-<h4 id="至多-123-买卖股票的最佳时机-III"><a href="#至多-123-买卖股票的最佳时机-III" class="headerlink" title="至多 123. 买卖股票的最佳时机 III"></a>至多 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">123. 买卖股票的最佳时机 III</a></h4><p>![[..&#x2F;Assets&#x2F;71e2035fd712ac2ed031c7e3626b3213_MD5.png]]</p>
+<h4 id="至多-123-买卖股票的最佳时机-III"><a href="#至多-123-买卖股票的最佳时机-III" class="headerlink" title="至多 123. 买卖股票的最佳时机 III"></a>至多 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">123. 买卖股票的最佳时机 III</a></h4><p>![[&#x2F;Assets&#x2F;71e2035fd712ac2ed031c7e3626b3213_MD5.png]]</p>
 <ol>
 <li>递归式子</li>
 </ol>

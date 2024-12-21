@@ -719,7 +719,7 @@
                 <p>数字三角形；最长上升子序列；最长公共子序列；编辑距离</p>
 <span id="more"></span>
 
-<p><img src="/../Assets/image-20230912171857992.png" srcset="/img/loading.gif" lazyload alt="线性DP状态计算"></p>
+<p><img src="/Assets/image-20230912171857992.png" srcset="/img/loading.gif" lazyload alt="线性DP状态计算"></p>
 <h3 id="数字三角形"><a href="#数字三角形" class="headerlink" title="数字三角形"></a>数字三角形</h3><ol>
 <li>$f(i,j)$表示从起点走到$(i,j)$终点的所有路径中，路径长度的最大值$MAX$</li>
 <li>递推公式：$dp[i][j]&#x3D;max(dp[i-1][j-1]+a[i][j],dp[i-1][j]+a[i][j])$</li>
@@ -732,7 +732,7 @@
 <li><code>q</code>数组下标为序列长度，值为所有该序列长度中具有的末尾最小值，该数组是严格单调递增的</li>
 <li>遍历到一个新的值<code>a[i]</code>，则找<code>q</code>数组中小于它的最大值<code>q[j]</code>，找到则可以替换<code>q[j+1]</code>-可以用二分</li>
 <li>证明q数组是严格单调递增的：如果长度为6的结尾最小值&#x3D;长度为5的结尾最小值，则矛盾（因为是最长上升子序列）</li>
-<li><img src="/../Assets/image-20231027113909338.png" srcset="/img/loading.gif" lazyload alt="示例"></li>
+<li><img src="/Assets/image-20231027113909338.png" srcset="/img/loading.gif" lazyload alt="示例"></li>
 </ol>
 </li>
 </ol>
