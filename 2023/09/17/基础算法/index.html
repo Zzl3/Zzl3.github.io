@@ -724,7 +724,7 @@
                 <p>二分；高精度；前缀和与差分；双指针算法；位运算；离散化</p>
 <span id="more"></span>
 
-<h2 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h2><h3 id="整数二分"><a href="#整数二分" class="headerlink" title="整数二分"></a>整数二分</h3><p><img src="/Assets/image-20230917144116744.png" srcset="/img/loading.gif" lazyload alt="示例图片"></p>
+<h2 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h2><h3 id="整数二分"><a href="#整数二分" class="headerlink" title="整数二分"></a>整数二分</h3><p><img src="/../Assets/image-20230917144116744.png" srcset="/img/loading.gif" lazyload alt="示例图片"></p>
 <p>有两个模版：求红绿的边界点，一定能求出边界点，之后根据边界点的数得到题目有无解；</p>
 <p>比如查找一个数，<code>check</code>如果是右边模版则为<code>q[mid]&gt;=target</code>；如果是左边模版则为<code>q[mid]&lt;=target</code></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// 补上加1：如果l=r-1，则mid=l+r向下取整=l，则l=l，会死循环</span><br><span class="hljs-comment">// check =&gt; l=mid/r=mid =&gt; 是否要补上+1</span><br><br><span class="hljs-comment">// 区间[l, r]被划分成[l, mid]和[mid + 1, r]时使用</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">bsearch_1</span><span class="hljs-params">(<span class="hljs-type">int</span> l,<span class="hljs-type">int</span> r)</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-keyword">while</span>(l &lt; r)<br>  &#123;<br>    <span class="hljs-type">int</span> mid = l + r &gt;&gt;<span class="hljs-number">1</span>;<br>    <span class="hljs-comment">// check 是否满足绿颜色的性质</span><br>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">check</span>(mid)) r = mid;<br>    <span class="hljs-keyword">else</span> l = mid + <span class="hljs-number">1</span>;<br>  &#125;<br>  <span class="hljs-keyword">return</span> l;<br>&#125;<br><br><span class="hljs-comment">// 区间[l, r]被划分成[l, mid - 1]和[mid, r]时使用</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">bsearch_2</span><span class="hljs-params">(<span class="hljs-type">int</span> l,<span class="hljs-type">int</span> r)</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-keyword">while</span>(l &lt; r)<br>  &#123;<br>    <span class="hljs-comment">// 区别，如果更新的是l=mid,则mid需要加上1</span><br>    <span class="hljs-type">int</span> mid = l + r + <span class="hljs-number">1</span> &gt;&gt;<span class="hljs-number">1</span>;<br>    <span class="hljs-comment">// check 是否满足红颜色的性质</span><br>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">check</span>(mid)) l = mid;<br>    <span class="hljs-keyword">else</span> r = mid - <span class="hljs-number">1</span>;<br>  &#125;<br>  <span class="hljs-keyword">return</span> l;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -740,7 +740,7 @@
 <li><p>拆成一位一位的数字，把它们存在一个数组中，一个数组元素表示一位数字</p>
 </li>
 <li><p>数组从左到右依次为从低位到高位，因为加法可能会产生进位，而数组在最前面加上数字是不可能的，但在尾巴处加上数字是好做的</p>
-<p><img src="/Assets/image-20231012161357711.png" srcset="/img/loading.gif" lazyload alt="示例"></p>
+<p><img src="/../Assets/image-20231012161357711.png" srcset="/img/loading.gif" lazyload alt="示例"></p>
 </li>
 <li><p>有+−×÷模版</p>
 </li>
@@ -754,7 +754,7 @@
 <li>二维公式：<ol>
 <li>$s[i][j]&#x3D;s[i-1][j]+s[i][j-1]-s[i-1][j-1]+a[i][j]$</li>
 <li>$a[x1][y1]+…+a[x2][y2]&#x3D;s[x2][y2]-s[x1-1][y2]-s[x2][y1-1]+s[x1-1][y1-1]$</li>
-<li><img src="/Assets/image-20230917163552064.png" srcset="/img/loading.gif" lazyload alt="画图示例"></li>
+<li><img src="/../Assets/image-20230917163552064.png" srcset="/img/loading.gif" lazyload alt="画图示例"></li>
 </ol>
 </li>
 </ol>
@@ -770,7 +770,7 @@
 <ol>
 <li>$b[i][j]&#x3D;a[i][j]-a[i-1][j]-a[i][j-1]+a[i-1][j-1]$</li>
 <li>当需要在$a[x1][y1]…a[x2][y2]$之间所有数都加上$c$，则只需要$b[x1][y1]+c;b[x1][y2+1]-c;b[x2+1][y1]-c;b[x2+1][y2+1]+c$即可</li>
-<li><img src="/Assets/image-20230917164916453.png" srcset="/img/loading.gif" lazyload alt="画图示例"></li>
+<li><img src="/../Assets/image-20230917164916453.png" srcset="/img/loading.gif" lazyload alt="画图示例"></li>
 </ol>
 </li>
 </ol>

@@ -723,8 +723,8 @@
 <li>DP优化一般是对代码或者方程做一个等价变形</li>
 <li>复杂度是状态数量×转移时间</li>
 </ol>
-<p><img src="/Assets/image-20230912104603831.png" srcset="/img/loading.gif" lazyload alt="DP问题"></p>
-<p><img src="/Assets/image-20230912160007398.png" srcset="/img/loading.gif" lazyload alt="背包问题状态计算"></p>
+<p><img src="/../Assets/image-20230912104603831.png" srcset="/img/loading.gif" lazyload alt="DP问题"></p>
+<p><img src="/../Assets/image-20230912160007398.png" srcset="/img/loading.gif" lazyload alt="背包问题状态计算"></p>
 <p>背包问题中$f(i,j)$表示物品数量为$i$，容量为$j$时候所有物品组合中，价值的最大值$MAX$</p>
 <h3 id="01背包"><a href="#01背包" class="headerlink" title="01背包"></a>01背包</h3><ol>
 <li>递推公式：$dp[i][j] &#x3D; max(dp[i - 1][j], dp[i - 1][j - w ]+ v);$</li>
@@ -734,7 +734,7 @@
 <li>如果$j$从小到大循环，则原来$dp[j]$中$j$小的值会被覆盖掉，则会导致物品$i$在循环过程中被放置很多次</li>
 </ol>
 </li>
-<li><img src="/Assets/8562-20211007092633901-1608550701.png" srcset="/img/loading.gif" lazyload alt="图片示例"></li>
+<li><img src="/../Assets/8562-20211007092633901-1608550701.png" srcset="/img/loading.gif" lazyload alt="图片示例"></li>
 </ol>
 <h3 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h3><ol>
 <li><p>递推公式：$dp[i][j]&#x3D;max(dp[i-1][j-w<em>k]+v</em>k) \quad k$动态变</p>
@@ -768,7 +768,7 @@
 <li>和01背包问题区别就是$w[i]$也需要进行$k$次循环了</li>
 <li>优化(滚动数组)：$dp[j]&#x3D;max(dp[j],dp[j−w[i][k]]+v[i][k]$</li>
 </ol>
-<h3 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h3><p><img src="/Assets/image-20230912144746326.png" srcset="/img/loading.gif" lazyload alt="背包问题分类"></p>
+<h3 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h3><p><img src="/../Assets/image-20230912144746326.png" srcset="/img/loading.gif" lazyload alt="背包问题分类"></p>
 <h4 id="几种问题问法和递推公式"><a href="#几种问题问法和递推公式" class="headerlink" title="几种问题问法和递推公式"></a>几种问题问法和递推公式</h4><ol>
 <li>能否能装满背包：<code>dp[j] = max(dp[j], dp[j - nums[i]] + nums[i]);</code></li>
 <li>装满背包有几种方法：<code>dp[j] += dp[j - nums[i]]</code></li>
