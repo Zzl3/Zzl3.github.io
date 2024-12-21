@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>祝阳阳一切顺利</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background: url('https://wimg.588ku.com/gif/21/10/20/889a70c540332344473bd64663be194a.gif') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #ff4500;
+            animation: colorChange 2s infinite;
+            font-size: 4em;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: #ff4500; text-shadow: 0 0 10px #ff4500; }
+            25% { color: #32cd32; text-shadow: 0 0 10px #32cd32; }
+            50% { color: #1e90ff; text-shadow: 0 0 10px #1e90ff; }
+            75% { color: #ffd700; text-shadow: 0 0 10px #ffd700; }
+            100% { color: #ff4500; text-shadow: 0 0 10px #ff4500; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #ff4500;
+            animation: fall 4s linear infinite;
+            transform: rotate(45deg);
+        }
+
+        @keyframes fall {
+            0% { 
+                top: -10px;
+                transform: rotate(45deg) scale(1);
+                opacity: 1;
+            }
+            100% { 
+                top: 100vh;
+                transform: rotate(765deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: red;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 1.5s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.3); }
+        }
+
+        .confetti:nth-child(odd) { background-color: #32cd32; }
+        .confetti:nth-child(even) { background-color: #ff4500; }
+        .confetti:nth-child(3n) { background-color: #1e90ff; }
+        .confetti:nth-child(4n) { background-color: #ff69b4; }
+        .confetti:nth-child(5n) { background-color: #ffd700; }
+        .confetti:nth-child(6n) { background-color: #8a2be2; }
+        .confetti:nth-child(7n) { background-color: #ff6347; }
+        .confetti:nth-child(8n) { background-color: #00ced1; }
+
+        .balloon {
+            position: absolute;
+            width: 60px;
+            height: 70px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8787);
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            animation: floating 6s ease-in-out infinite;
+            box-shadow: inset -5px -5px 15px rgba(0,0,0,0.3);
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 20px;
+            background: #fff;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translate(0, 0) rotate(3deg); }
+            50% { transform: translate(0, -20px) rotate(-3deg); }
+        }
+
+        .star {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-right: 10px solid transparent;
+            border-bottom: 7px solid gold;
+            border-left: 10px solid transparent;
+            transform: rotate(35deg);
+            animation: starTwinkle 1.5s infinite;
+        }
+
+        .star:before {
+            content: '';
+            position: absolute;
+            border-bottom: 8px solid gold;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            top: -5px;
+            left: -6px;
+            transform: rotate(-35deg);
+        }
+
+        .star:after {
+            content: '';
+            position: absolute;
+            border-bottom: 7px solid gold;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            transform: rotate(-70deg);
+            top: 0;
+            left: -10px;
+        }
+
+        @keyframes starTwinkle {
+            0%, 100% { opacity: 1; transform: rotate(35deg) scale(1); }
+            50% { opacity: 0.5; transform: rotate(35deg) scale(0.8); }
+        }
+
+        .rainbow {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            border-radius: 100px 100px 0 0;
+            background: linear-gradient(
+                124deg,
+                #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840,
+                #1ddde8, #2b1de8, #dd00f3, #dd00f3
+            );
+            background-size: 1800% 1800%;
+            animation: rainbow 18s ease infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 82% }
+            50% { background-position: 100% 19% }
+            100% { background-position: 0% 82% }
+        }
+
+        .cloud {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            background: #fff;
+            border-radius: 15px;
+            animation: cloudFloat 10s linear infinite;
+            opacity: 0.8;
+        }
+
+        .cloud:before, .cloud:after {
+            content: '';
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        .cloud:before {
+            width: 40px;
+            height: 40px;
+            top: -20px;
+            left: 15px;
+        }
+
+        .cloud:after {
+            width: 30px;
+            height: 30px;
+            top: -15px;
+            right: 15px;
+        }
+
+        @keyframes cloudFloat {
+            from { transform: translateX(-150%); }
+            to { transform: translateX(150%); }
+        }
+
+        /* 添加烟花效果 */
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            animation: explode 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(30);
+                opacity: 0;
+            }
+        }
+
+        /* 添加漂浮的文字 */
+        .floating-text {
+            position: absolute;
+            font-size: 1.2em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: floatText 8s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes floatText {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, -15px) rotate(5deg); }
+            50% { transform: translate(0, -25px) rotate(0deg); }
+            75% { transform: translate(-10px, -15px) rotate(-5deg); }
+        }
+
+        /* 添加闪电效果 */
+        .lightning {
+            position: absolute;
+            width: 3px;
+            height: 50px;
+            background: #fff;
+            animation: lightning 3s infinite;
+            transform-origin: top;
+            opacity: 0;
+        }
+
+        @keyframes lightning {
+            0%, 95%, 100% { opacity: 0; }
+            96%, 99% { opacity: 1; }
+        }
+
+        /* 添加彩带效果 */
+        .ribbon {
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            animation: ribbonWave 3s ease-in-out infinite;
+            transform-origin: left center;
+        }
+
+        @keyframes ribbonWave {
+            0%, 100% { transform: rotate(0deg) scaleX(1); }
+            50% { transform: rotate(5deg) scaleX(0.9); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>祝阳阳一切顺利！ ✨</h1>
+    </div>
+
+    <!-- Confetti -->
+    <div class="confetti" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="confetti" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="confetti" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="confetti" style="left: 40%; animation-delay: 3s;"></div>
+    <div class="confetti" style="left: 50%; animation-delay: 0.5s;"></div>
+    <div class="confetti" style="left: 60%; animation-delay: 1.5s;"></div>
+    <div class="confetti" style="left: 70%; animation-delay: 2.5s;"></div>
+    <div class="confetti" style="left: 80%; animation-delay: 3.5s;"></div>
+    <div class="confetti" style="left: 90%; animation-delay: 0.8s;"></div>
+    <div class="confetti" style="left: 95%; animation-delay: 1.8s;"></div>
+
+    <!-- Hearts -->
+    <div class="heart" style="left: 15%; animation-delay: 0s;">❤️</div>
+    <div class="heart" style="left: 35%; animation-delay: 2s;">❤️</div>
+    <div class="heart" style="left: 55%; animation-delay: 1s;">❤️</div>
+    <div class="heart" style="left: 75%; animation-delay: 3s;">❤️</div>
+    <div class="heart" style="left: 85%; animation-delay: 0.5s;">❤️</div>
+
+    <!-- Sparkles -->
+    <div class="sparkle" style="left: 25%; top: 20%; animation-delay: 0s;"></div>
+    <div class="sparkle" style="left: 45%; top: 40%; animation-delay: 0.5s;"></div>
+    <div class="sparkle" style="left: 65%; top: 30%; animation-delay: 1s;"></div>
+    <div class="sparkle" style="left: 85%; top: 50%; animation-delay: 1.5s;"></div>
+    <div class="sparkle" style="left: 15%; top: 60%; animation-delay: 2s;"></div>
+
+    <!-- 添加新的装饰元素 -->
+    <div class="rainbow" style="top: 10%; left: 10%;"></div>
+    <div class="rainbow" style="top: 15%; right: 10%; transform: scale(0.7);"></div>
+    
+    <div class="balloon" style="top: 20%; left: 15%; background: linear-gradient(135deg, #ff6b6b, #ff8787);"></div>
+    <div class="balloon" style="top: 30%; right: 20%; background: linear-gradient(135deg, #74c0fc, #4dabf7);"></div>
+    <div class="balloon" style="top: 25%; left: 45%; background: linear-gradient(135deg, #69db7c, #40c057);"></div>
+    
+    <div class="cloud" style="top: 15%; animation-delay: 0s;"></div>
+    <div class="cloud" style="top: 25%; animation-delay: -5s;"></div>
+    <div class="cloud" style="top: 35%; animation-delay: -8s;"></div>
+    
+    <div class="star" style="top: 10%; left: 20%;"></div>
+    <div class="star" style="top: 15%; left: 40%;"></div>
+    <div class="star" style="top: 12%; right: 30%;"></div>
+    <div class="star" style="top: 18%; right: 20%;"></div>
+
+    <!-- 添加漂浮文字 -->
+    <div class="floating-text" style="top: 40%; left: 20%;">✨ Dream Big ✨</div>
+    <div class="floating-text" style="top: 45%; right: 25%;">🌟 Believe 🌟</div>
+    <div class="floating-text" style="top: 35%; left: 60%;">💫 You Can 💫</div>
+
+    <!-- 添加彩带 -->
+    <div class="ribbon" style="top: 30%; left: 10%; transform: rotate(30deg);"></div>
+    <div class="ribbon" style="top: 40%; right: 10%; transform: rotate(-30deg);"></div>
+    <div class="ribbon" style="top: 50%; left: 30%; transform: rotate(15deg);"></div>
+
+    <script>
+        // 动态创建更多闪光点
+        function createSparkles() {
+            for (let i = 0; i < 20; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 2 + 's';
+                document.body.appendChild(sparkle);
+            }
+        }
+
+        // 添加动态创建装饰元素的函数
+        function createDecorations() {
+            // 创建更多星星
+            for (let i = 0; i < 15; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 50 + '%';
+                star.style.animationDelay = Math.random() * 2 + 's';
+                document.body.appendChild(star);
+            }
+        }
+        
+        // 调用函数
+        createDecorations();
+        createSparkles();
+
+        // 创建烟花效果
+        function createFirework() {
+            const colors = ['#ff6b6b', '#4ecdc4', '#ffe66d', '#4dabf7', '#69db7c'];
+            const firework = document.createElement('div');
+            firework.className = 'firework';
+            firework.style.left = Math.random() * 100 + '%';
+            firework.style.top = Math.random() * 100 + '%';
+            firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.appendChild(firework);
+            
+            // 动画结束后移除元素
+            setTimeout(() => {
+                document.body.removeChild(firework);
+            }, 1500);
+        }
+
+        // 创建闪电效果
+        function createLightning() {
+            const lightning = document.createElement('div');
+            lightning.className = 'lightning';
+            lightning.style.left = Math.random() * 100 + '%';
+            lightning.style.transform = `rotate(${Math.random() * 20 - 10}deg)`;
+            document.body.appendChild(lightning);
+            
+            setTimeout(() => {
+                document.body.removeChild(lightning);
+            }, 3000);
+        }
+
+        // 定期触发效果
+        setInterval(createFirework, 2000);
+        setInterval(createLightning, 5000);
+
+        // 初始化调用
+        createDecorations();
+        createSparkles();
+    </script>
+</body>
+</html>
